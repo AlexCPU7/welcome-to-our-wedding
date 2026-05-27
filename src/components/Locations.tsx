@@ -13,10 +13,11 @@ function LocationCard({ location }: { location: Location }) {
           onError={(event) => {
             const image = event.currentTarget;
 
-            if (image.src.endsWith(location.photoFallback)) {
+            if (image.dataset.fallbackApplied === 'true') {
               return;
             }
 
+            image.dataset.fallbackApplied = 'true';
             image.src = location.photoFallback;
           }}
         />

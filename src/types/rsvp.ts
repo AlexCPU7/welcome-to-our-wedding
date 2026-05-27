@@ -15,6 +15,7 @@ export type DrinkOption =
   | 'no_alcohol';
 
 export type RsvpAnswers = {
+  attendance: YesNo;
   ceremony: YesNo;
   drinks: DrinkOption[];
   allergies: string;
@@ -30,6 +31,7 @@ export type StoredRsvp = {
 };
 
 export const defaultRsvpAnswers: RsvpAnswers = {
+  attendance: '',
   ceremony: '',
   drinks: [],
   allergies: '',

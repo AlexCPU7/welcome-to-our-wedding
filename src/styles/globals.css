@@ -466,8 +466,9 @@ a {
 .save-status {
   position: fixed;
   right: 18px;
-  bottom: 18px;
-  z-index: 30;
+  top: 18px;
+  bottom: auto;
+  z-index: 60;
   display: inline-flex;
   align-items: center;
   gap: 9px;
@@ -862,7 +863,8 @@ textarea:focus {
 
   .save-status {
     right: 10px;
-    bottom: 76px;
+    top: 10px;
+    bottom: auto;
     left: 10px;
     max-width: none;
   }
@@ -3366,16 +3368,31 @@ html[data-design='blue-polaroid'] .hero__meta {
 
 html[data-design='blue-polaroid'] .hero__ornament {
   display: block;
-  width: clamp(116px, 17vw, 190px);
+  width: clamp(174px, 25.5vw, 285px);
   aspect-ratio: 0.82;
   border: 10px solid #fffdfb;
   border-bottom-width: 38px;
   border-radius: 2px;
-  background:
-    linear-gradient(135deg, rgba(168, 180, 184, 0.25), rgba(240, 231, 222, 0.45)),
-    radial-gradient(circle at 62% 28%, rgba(255, 255, 255, 0.76), transparent 7rem);
+  background: #fffdfb;
   box-shadow: 0 16px 34px rgba(84, 117, 128, 0.2);
   opacity: 0.78;
+  overflow: hidden;
+}
+
+html[data-design='blue-polaroid'] .hero__ornament img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 1px;
+  object-fit: cover;
+}
+
+html[data-design='blue-polaroid'] .hero__ornament--left img {
+  object-position: 50% 42%;
+}
+
+html[data-design='blue-polaroid'] .hero__ornament--right img {
+  object-position: 50% 40%;
 }
 
 html[data-design='blue-polaroid'] .hero__ornament::before {
@@ -3383,25 +3400,17 @@ html[data-design='blue-polaroid'] .hero__ornament::before {
 }
 
 html[data-design='blue-polaroid'] .hero__ornament::after {
-  position: absolute;
-  right: 8px;
-  bottom: -32px;
-  border: 0;
-  border-radius: 0;
-  color: #777069;
-  content: 'love story';
-  font-family: var(--font-hand);
-  font-size: 1rem;
+  display: none;
 }
 
 html[data-design='blue-polaroid'] .hero__ornament--left {
-  left: clamp(18px, 5vw, 64px);
+  left: clamp(-18px, 1.5vw, 38px);
   top: clamp(24px, 7vw, 76px);
   transform: rotate(-6deg);
 }
 
 html[data-design='blue-polaroid'] .hero__ornament--right {
-  right: clamp(16px, 5vw, 70px);
+  right: clamp(-20px, 1.5vw, 42px);
   bottom: clamp(26px, 7vw, 84px);
   transform: rotate(5deg);
 }

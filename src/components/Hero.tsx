@@ -2,11 +2,18 @@ import { wedding } from '../data/wedding';
 import { getWeddingCountdownLabel } from '../utils/date';
 
 export function Hero() {
+  const topLeftPhoto = `${import.meta.env.BASE_URL}images/couple-top-left.jpg`;
+  const bottomRightPhoto = `${import.meta.env.BASE_URL}images/couple-bottom-right.jpg`;
+
   return (
     <>
       <section className="hero section-reveal" aria-labelledby="hero-title">
-        <div className="hero__ornament hero__ornament--left" aria-hidden="true" />
-        <div className="hero__ornament hero__ornament--right" aria-hidden="true" />
+        <div className="hero__ornament hero__ornament--left" aria-hidden="true">
+          <img src={topLeftPhoto} alt="" loading="eager" />
+        </div>
+        <div className="hero__ornament hero__ornament--right" aria-hidden="true">
+          <img src={bottomRightPhoto} alt="" loading="eager" />
+        </div>
 
         <div className="hero__standard">
           <p className="eyebrow">Свадебное приглашение</p>

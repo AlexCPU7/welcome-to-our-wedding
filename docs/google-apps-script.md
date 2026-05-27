@@ -21,6 +21,7 @@ const SHEET_NAME = 'RSVP';
 
 const HEADERS = [
   'guest_uuid',
+  'attendance',
   'ceremony',
   'drinks',
   'allergies',
@@ -46,10 +47,11 @@ function doPost(e) {
 
     const now = new Date().toISOString();
     const rowIndex = findRowByUuid(sheet, payload.guest_uuid);
-    const firstReceivedAt = rowIndex ? sheet.getRange(rowIndex, 7).getValue() || now : now;
+    const firstReceivedAt = rowIndex ? sheet.getRange(rowIndex, 8).getValue() || now : now;
 
     const rowValues = [
       payload.guest_uuid,
+      payload.attendance || '',
       payload.ceremony || '',
       Array.isArray(payload.drinks) ? payload.drinks.join(', ') : '',
       payload.allergies || '',

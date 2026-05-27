@@ -1,5 +1,7 @@
 export const RSVP_ENDPOINT = import.meta.env.VITE_RSVP_ENDPOINT?.trim() ?? '';
 
+const publicAsset = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+
 const makeMapLinks = (query: string) => ({
   yandex: `https://yandex.ru/maps/?text=${encodeURIComponent(query)}`,
   twoGis: `https://2gis.ru/moscow/search/${encodeURIComponent(query)}`,
@@ -23,8 +25,8 @@ export const wedding = {
     place: 'Музей-заповедник «Царицыно», Оперный дом',
     address: 'Москва, Дольская ул., 1, стр. 5',
     note: 'Будем ждать гостей, которые хотят присутствовать на церемонии.',
-    photo: '/images/opera-house.png',
-    photoFallback: '/images/tsaritsyno-location.svg',
+    photo: publicAsset('images/opera-house.png'),
+    photoFallback: publicAsset('images/tsaritsyno-location.svg'),
     photoAlt: 'Музей-заповедник «Царицыно», Оперный дом',
     maps: makeMapLinks('Музей-заповедник Царицыно Оперный дом Москва Дольская улица 1 стр 5'),
   },
@@ -34,8 +36,8 @@ export const wedding = {
     place: 'Ресторан Lauren Parker',
     address: 'Москва, ул. Станиславского, 15',
     note: 'Основной праздничный вечер в ресторане.',
-    photo: '/images/lauren-parker.png',
-    photoFallback: '/images/lauren-parker-location.svg',
+    photo: publicAsset('images/lauren-parker.png'),
+    photoFallback: publicAsset('images/lauren-parker-location.svg'),
     photoAlt: 'Ресторан Lauren Parker',
     maps: makeMapLinks('Lauren Parker Москва улица Станиславского 15'),
   },

@@ -18,6 +18,7 @@ export async function submitRsvp({ guestUuid, answers }: SubmitRsvpPayload): Pro
 
   const payload = {
     guest_uuid: guestUuid,
+    attendance: answers.attendance,
     ceremony: answers.ceremony,
     drinks: answers.drinks,
     allergies: answers.allergies,

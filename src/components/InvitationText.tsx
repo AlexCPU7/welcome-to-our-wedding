@@ -17,7 +17,7 @@ export function InvitationText() {
           <span>24</span>
           <strong>
             <svg className="sketch-calendar__heart" viewBox="0 0 150 112" aria-hidden="true">
-              <path d="M75 99 C50 78 20 63 10 39 C2 20 13 6 32 7 C50 8 64 22 75 30 C85 22 101 7 120 10 C139 13 146 31 136 50 C125 72 96 84 75 99 Z" />
+              <path d="M75 99 C58 79 39 65 29 44 C23 31 35 20 51 20 C63 20 72 27 75 34 C80 26 89 20 100 20 C116 20 128 33 122 49 C114 70 92 84 75 99 Z" />
             </svg>
             <span>25</span>
           </strong>

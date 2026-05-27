@@ -16,6 +16,11 @@ const yesNoOptions: Array<{ value: YesNo; label: string }> = [
   { value: 'no', label: 'Нет' },
 ];
 
+const attendanceOptions: Array<{ value: YesNo; label: string }> = [
+  { value: 'yes', label: 'Да, буду' },
+  { value: 'no', label: 'К сожалению, не смогу' },
+];
+
 const drinkOptions: Array<{ value: DrinkOption; label: string }> = [
   { value: 'beer', label: 'Пиво' },
   { value: 'whiskey', label: 'Виски' },
@@ -63,10 +68,10 @@ export function RsvpForm({ guest }: RsvpFormProps) {
       window.clearTimeout(statusHideTimerRef.current);
     }
 
-    if (state === 'local-only') {
+    if (state === 'saved' || state === 'local-only' || state === 'error') {
       statusHideTimerRef.current = window.setTimeout(() => {
         setSaveState('idle');
-      }, 10000);
+      }, 6000);
     }
   }, []);
 
@@ -77,7 +82,7 @@ export function RsvpForm({ guest }: RsvpFormProps) {
         return;
       }
 
-      setSaveState('saving');
+      showTemporaryStatus('saving');
       setLastError('');
 
       const result = await submitRsvp({
@@ -87,7 +92,7 @@ export function RsvpForm({ guest }: RsvpFormProps) {
 
       if (result.status === 'success') {
         markRsvpSynced(guest.uuid, nextAnswers);
-        setSaveState('saved');
+        showTemporaryStatus('saved');
         return;
       }
 
@@ -97,7 +102,7 @@ export function RsvpForm({ guest }: RsvpFormProps) {
       }
 
       setLastError(result.message);
-      setSaveState('error');
+      showTemporaryStatus('error');
     },
     [canSyncToExternalService, guest.uuid, showTemporaryStatus],
   );
@@ -121,7 +126,7 @@ export function RsvpForm({ guest }: RsvpFormProps) {
     });
 
     if (canSyncToExternalService) {
-      setSaveState('saving');
+      showTemporaryStatus('saving');
     } else {
       showTemporaryStatus('local-only');
     }
@@ -206,6 +211,23 @@ export function RsvpForm({ guest }: RsvpFormProps) {
       </div>
 
       <form className="rsvp-form">
+        <fieldset className="question-card">
+          <legend>Подтвердите, пожалуйста, своё присутствие на свадьбе</legend>
+          <div className="option-grid option-grid--two">
+            {attendanceOptions.map((option) => (
+              <label className="choice-pill" key={option.value}>
+                <input
+                  type="radio"
+                  name="attendance"
+                  checked={answers.attendance === option.value}
+                  onChange={() => updateAnswer('attendance', option.value)}
+                />
+                <span>{option.label}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+
         <fieldset className="question-card">
           <legend>
             Планируете ли вы присутствовать на свадебной церемонии в музее-заповеднике «Царицыно»?
