@@ -6,12 +6,8 @@ export type DrinkOption =
   | 'vodka'
   | 'cognac'
   | 'champagne'
-  | 'white_wine_dry'
-  | 'white_wine_semidry'
-  | 'white_wine_sweet'
-  | 'red_wine_dry'
-  | 'red_wine_semidry'
-  | 'red_wine_sweet'
+  | 'white_wine'
+  | 'red_wine'
   | 'no_alcohol';
 
 export type RsvpAnswers = {

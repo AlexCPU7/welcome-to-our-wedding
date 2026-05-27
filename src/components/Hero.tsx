@@ -8,13 +8,6 @@ export function Hero() {
   return (
     <>
       <section className="hero section-reveal" aria-labelledby="hero-title">
-        <div className="hero__ornament hero__ornament--left" aria-hidden="true">
-          <img src={topLeftPhoto} alt="" loading="eager" />
-        </div>
-        <div className="hero__ornament hero__ornament--right" aria-hidden="true">
-          <img src={bottomRightPhoto} alt="" loading="eager" />
-        </div>
-
         <div className="hero__standard">
           <p className="eyebrow">Свадебное приглашение</p>
           <h1 id="hero-title" className="hero__title">

@@ -698,7 +698,7 @@ textarea:focus {
 }
 
 .wish-card {
-  margin-top: 28px;
+  margin-top: 1px;
   padding: clamp(24px, 5vw, 42px);
   border: 1px solid rgba(115, 95, 76, 0.12);
   border-radius: var(--radius-medium);

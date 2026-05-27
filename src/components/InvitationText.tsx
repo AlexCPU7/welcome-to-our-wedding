@@ -2,7 +2,7 @@ export function InvitationText() {
   return (
     <section className="content-section section-reveal" aria-labelledby="invitation-title">
       <div className="section-kicker">Приглашение</div>
-      <h2 id="invitation-title">Дорогие гости</h2>
+      <h2 id="invitation-title">Дорогие гости!</h2>
       <div className="sketch-calendar" aria-label="Дата свадьбы — 25 июня 2026 года">
         <div className="sketch-calendar__top">
           <span>Июнь</span>
@@ -26,9 +26,8 @@ export function InvitationText() {
       </div>
       <div className="prose centered invitation-prose">
         <p>
-          Приглашаем вас разделить с нами радость нашего свадебного дня. Нам очень хочется,
-          чтобы рядом были самые близкие люди — те, с кем этот день станет ещё теплее и
-          счастливее.
+          Мы будем счастливы разделить с Вами радость неповторимого для нас дня -дня нашей свадьбы!
+          Приглашаем присоединиться к нашему празднику и украсить его своим присутствием 25 июня!
         </p>
         <p>
           Основной сбор гостей состоится в ресторане Lauren Parker в 17:00. Для тех, кто хочет

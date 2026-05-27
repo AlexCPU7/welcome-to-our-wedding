@@ -22,17 +22,11 @@ const attendanceOptions: Array<{ value: YesNo; label: string }> = [
 ];
 
 const drinkOptions: Array<{ value: DrinkOption; label: string }> = [
-  { value: 'beer', label: 'Пиво' },
-  { value: 'whiskey', label: 'Виски' },
+  { value: 'champagne', label: 'Шампанское' },
+  { value: 'white_wine', label: 'Белое вино' },
+  { value: 'red_wine', label: 'Красное вино' },
   { value: 'vodka', label: 'Водка' },
   { value: 'cognac', label: 'Коньяк' },
-  { value: 'champagne', label: 'Шампанское' },
-  { value: 'white_wine_dry', label: 'Белое вино (сухое)' },
-  { value: 'white_wine_semidry', label: 'Белое вино (полусухое)' },
-  { value: 'white_wine_sweet', label: 'Белое вино (сладкое)' },
-  { value: 'red_wine_dry', label: 'Красное вино (сухое)' },
-  { value: 'red_wine_semidry', label: 'Красное вино (полусухое)' },
-  { value: 'red_wine_sweet', label: 'Красное вино (сладкое)' },
   { value: 'no_alcohol', label: 'Не пью алкоголь' },
 ];
 

@@ -52,9 +52,9 @@ function App() {
         <InvitationText />
         <Timeline />
         <Locations />
-        <RsvpForm guest={guest} />
         <DressCode />
         <Wishes />
+        <RsvpForm guest={guest} />
         <Footer />
       </main>
     </>
