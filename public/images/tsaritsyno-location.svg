@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-label="Музей-заповедник Царицыно">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#dbeaf0"/>
+      <stop offset=".55" stop-color="#f5efe6"/>
+      <stop offset="1" stop-color="#c9d7cf"/>
+    </linearGradient>
+    <linearGradient id="brick" x1="0" x2="1">
+      <stop offset="0" stop-color="#a46a5f"/>
+      <stop offset="1" stop-color="#7d413e"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence baseFrequency=".8" numOctaves="3" seed="7" type="fractalNoise"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 .08"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect width="900" height="620" fill="url(#sky)"/>
+  <circle cx="720" cy="88" r="62" fill="#fff7df" opacity=".72"/>
+  <path d="M0 424 C140 370 250 400 370 354 C530 292 700 340 900 268 L900 620 L0 620 Z" fill="#a7b79b" opacity=".48"/>
+  <path d="M0 470 C170 430 280 452 420 410 C580 362 710 392 900 342 L900 620 L0 620 Z" fill="#7f9878" opacity=".42"/>
+  <g transform="translate(155 158)">
+    <path d="M82 308 L82 170 L126 170 L126 132 L164 132 L164 170 L230 170 L230 118 L282 118 L282 170 L356 170 L356 132 L394 132 L394 170 L438 170 L438 308 Z" fill="url(#brick)"/>
+    <path d="M126 170 L164 132 L230 170 M282 170 L356 132 L394 170" fill="none" stroke="#f8eee1" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M54 170 L104 116 L154 170 M204 170 L256 96 L308 170 M386 170 L438 116 L488 170" fill="none" stroke="#7d413e" stroke-width="20" stroke-linejoin="round"/>
+    <path d="M54 170 L104 116 L154 170 M204 170 L256 96 L308 170 M386 170 L438 116 L488 170" fill="none" stroke="#f8eee1" stroke-width="8" stroke-linejoin="round"/>
+    <g fill="#f5efe6" opacity=".9">
+      <rect x="116" y="204" width="42" height="72" rx="18"/>
+      <rect x="206" y="204" width="42" height="72" rx="18"/>
+      <rect x="296" y="204" width="42" height="72" rx="18"/>
+      <rect x="386" y="204" width="42" height="72" rx="18"/>
+    </g>
+    <rect x="58" y="308" width="458" height="18" fill="#f8eee1"/>
+  </g>
+  <path d="M110 536 C230 494 330 520 450 486 C590 446 710 464 822 430" fill="none" stroke="#fffdf8" stroke-width="8" opacity=".38"/>
+  <rect width="900" height="620" fill="transparent" filter="url(#grain)"/>
+</svg>
