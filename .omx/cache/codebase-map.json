@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "worktreeRoot": "D:\\code\\site-welcome",
+  "gitDir": "D:\\code\\site-welcome\\.git",
+  "indexMtimeMs": 1779916846204.8926,
+  "indexSize": 6991,
+  "map": "  src/: App, main, vite-env.d\n  src/components/: DesignSwitcher, DressCode, Footer, Hero, InvitationText, Locations, RsvpForm, Timeline, Wishes\n  src/data/: designVariants, wedding\n  src/services/: guest, rsvpApi, storage\n  src/types/: rsvp\n  src/utils/: date\n  (root): vite.config",
+  "createdAt": "2026-05-28T12:39:30.532Z"
+}

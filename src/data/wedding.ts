@@ -80,6 +80,19 @@ export const wedding = {
     },
   ],
   dressCode: {
-    colors: ['ivory', 'champagne', 'beige', 'dusty rose', 'sage', 'pearl grey'],
+    colors: [
+      { label: 'Шампань', hex: '#b49a88' },
+      { label: 'Капучино', hex: '#684e3d' },
+      { label: 'Шоколад', hex: '#543523' },
+      { label: 'Нежно-розовый', hex: '#f5e4e2' },
+      { label: 'Пудровый', hex: '#c69593' },
+      { label: 'Пыльная роза', hex: '#a48086' },
+      { label: 'Лиловый', hex: '#937884' },
+      { label: 'Небесно-голубой', hex: '#a2bcd0' },
+      { label: 'Серо-голубой', hex: '#8189a0' },
+      { label: 'Жемчужно-серый', hex: '#a09a90' },
+      { label: 'Оливковый', hex: '#959a75' },
+      { label: 'Шалфей', hex: '#68705a' },
+    ],
   },
 };

@@ -2,9 +2,6 @@ import { wedding } from '../data/wedding';
 import { getWeddingCountdownLabel } from '../utils/date';
 
 export function Hero() {
-  const topLeftPhoto = `${import.meta.env.BASE_URL}images/couple-top-left.jpg`;
-  const bottomRightPhoto = `${import.meta.env.BASE_URL}images/couple-bottom-right.jpg`;
-
   return (
     <>
       <section className="hero section-reveal" aria-labelledby="hero-title">

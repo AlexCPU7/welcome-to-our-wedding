@@ -6,7 +6,8 @@ export type DesignVariantId =
   | 'calendar'
   | 'classic-red'
   | 'blue-polaroid'
-  | 'playful-red';
+  | 'playful-red'
+  | 'pearl';
 
 export type DesignVariant = {
   id: DesignVariantId;
@@ -63,6 +64,12 @@ export const designVariants: DesignVariant[] = [
     label: 'Playful hand-drawn',
     shortLabel: 'Playful',
     description: 'Красный фон, кремовые карточки, рукописные заголовки, сердечки и doodle-линии.',
+  },
+  {
+    id: 'pearl',
+    label: 'Pearl editorial',
+    shortLabel: 'Pearl',
+    description: 'Светлый вытянутый макет с жемчужинами, тонкой типографикой и polaroid-фотографиями.',
   },
 ];
 

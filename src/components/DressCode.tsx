@@ -14,10 +14,16 @@ export function DressCode() {
             Но мы будем рады, если в своих нарядах Вы поддержите цветовую гамму нашей свадьбы
           </p>
         </div>
-        <div className="palette" aria-label="Палитра дресс-кода">
+        <div className="palette palette--fabric" aria-label="Палитра дресс-кода">
           {wedding.dressCode.colors.map((color) => (
-            <span className={`palette__swatch palette__swatch--${color.replace(' ', '-')}`} key={color}>
-              {color}
+            <span
+              aria-label={color.label}
+              className="palette__swatch"
+              key={color.label}
+              style={{ backgroundColor: color.hex }}
+              title={color.label}
+            >
+              {color.label}
             </span>
           ))}
         </div>

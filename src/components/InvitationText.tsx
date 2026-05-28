@@ -1,4 +1,7 @@
 export function InvitationText() {
+  const firstPhoto = `${import.meta.env.BASE_URL}images/couple-top-left.jpg`;
+  const secondPhoto = `${import.meta.env.BASE_URL}images/couple-bottom-right.jpg`;
+
   return (
     <section className="content-section section-reveal" aria-labelledby="invitation-title">
       <div className="section-kicker">Приглашение</div>
@@ -34,6 +37,14 @@ export function InvitationText() {
           присутствовать на свадебной церемонии, мы будем ждать вас в Оперном доме музея-заповедника
           «Царицыно» к 14:00.
         </p>
+      </div>
+      <div className="pearl-polaroids" aria-hidden="true">
+        <figure className="pearl-polaroid pearl-polaroid--left">
+          <img src={firstPhoto} alt="" loading="lazy" />
+        </figure>
+        <figure className="pearl-polaroid pearl-polaroid--right">
+          <img src={secondPhoto} alt="" loading="lazy" />
+        </figure>
       </div>
     </section>
   );

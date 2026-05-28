@@ -5,6 +5,7 @@ import { Footer } from './components/Footer';
 import { Hero } from './components/Hero';
 import { InvitationText } from './components/InvitationText';
 import { Locations } from './components/Locations';
+import { PearlCountdownBlock, PearlDateBlock } from './components/PearlDateBlock';
 import { RsvpForm } from './components/RsvpForm';
 import { Timeline } from './components/Timeline';
 import { Wishes } from './components/Wishes';
@@ -49,7 +50,9 @@ function App() {
       <DesignSwitcher selected={design} onSelect={setDesign} />
       <main className="page-shell" data-design={design}>
         <Hero />
+        <PearlDateBlock />
         <InvitationText />
+        <PearlCountdownBlock />
         <Timeline />
         <Locations />
         <DressCode />
