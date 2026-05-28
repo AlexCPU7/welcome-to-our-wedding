@@ -1,0 +1,317 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/Timeline.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=31783b42"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import { wedding } from "/src/data/wedding.ts";
+const events = wedding.schedule;
+function CalendarRoute() {
+  return /* @__PURE__ */ jsxDEV("div", { className: "calendar-route", "aria-label": "Календарный маршрут свадебного дня", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "calendar-route__month", children: "Июнь 2026" }, void 0, false, {
+      fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+      lineNumber: 8,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "calendar-route__week", "aria-label": "Неделя свадьбы", children: [
+      /* @__PURE__ */ jsxDEV("div", { children: [
+        /* @__PURE__ */ jsxDEV("span", { children: "ПН" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+          lineNumber: 11,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("strong", { children: "22" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+          lineNumber: 12,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+        lineNumber: 10,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { children: [
+        /* @__PURE__ */ jsxDEV("span", { children: "ВТ" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+          lineNumber: 15,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("strong", { children: "23" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+          lineNumber: 16,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+        lineNumber: 14,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { children: [
+        /* @__PURE__ */ jsxDEV("span", { children: "СР" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+          lineNumber: 19,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("strong", { children: "24" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+          lineNumber: 20,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+        lineNumber: 18,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "is-wedding-day", children: [
+        /* @__PURE__ */ jsxDEV("span", { children: "ЧТ" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+          lineNumber: 23,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("strong", { children: "25" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+          lineNumber: 24,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+        lineNumber: 22,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { children: [
+        /* @__PURE__ */ jsxDEV("span", { children: "ПТ" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+          lineNumber: 27,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("strong", { children: "26" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+          lineNumber: 28,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+        lineNumber: 26,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+      lineNumber: 9,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "calendar-route__path", "aria-hidden": "true", children: [
+      /* @__PURE__ */ jsxDEV("svg", { viewBox: "0 0 260 560", preserveAspectRatio: "none", children: /* @__PURE__ */ jsxDEV(
+        "path",
+        {
+          d: "M132 12 C128 86 70 118 84 188 C102 278 190 260 178 350 C166 434 90 432 114 548",
+          fill: "none"
+        },
+        void 0,
+        false,
+        {
+          fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+          lineNumber: 34,
+          columnNumber: 11
+        },
+        this
+      ) }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+        lineNumber: 33,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("span", { className: "calendar-route__heart calendar-route__heart--top", children: "25" }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+        lineNumber: 39,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("span", { className: "calendar-route__heart calendar-route__heart--middle", children: "25" }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+        lineNumber: 40,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("span", { className: "calendar-route__dot" }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+        lineNumber: 41,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+      lineNumber: 32,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("article", { className: "calendar-route__event calendar-route__event--ceremony", children: [
+      /* @__PURE__ */ jsxDEV("time", { children: "14:00" }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+        lineNumber: 45,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("h3", { children: "Сбор гостей" }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+        lineNumber: 46,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("p", { children: "Перед свадебной церемонией в Царицыно" }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+        lineNumber: 47,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+      lineNumber: 44,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("article", { className: "calendar-route__event calendar-route__event--ceremony-start", children: [
+      /* @__PURE__ */ jsxDEV("time", { children: "14:30" }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+        lineNumber: 51,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("h3", { children: "Церемония" }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+        lineNumber: 52,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("p", { children: "Начало свадебной церемонии" }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+        lineNumber: 53,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+      lineNumber: 50,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("article", { className: "calendar-route__event calendar-route__event--banquet", children: [
+      /* @__PURE__ */ jsxDEV("time", { children: "17:00" }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+        lineNumber: 57,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("h3", { children: "Банкет" }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+        lineNumber: 58,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("p", { children: "Начало банкета в Lauren Parker" }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+        lineNumber: 59,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+      lineNumber: 56,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("article", { className: "calendar-route__event calendar-route__event--finish", children: [
+      /* @__PURE__ */ jsxDEV("time", { children: "23:00" }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+        lineNumber: 63,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("h3", { children: "Завершение" }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+        lineNumber: 64,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("p", { children: "Завершение свадебного вечера" }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+        lineNumber: 65,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+      lineNumber: 62,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+    lineNumber: 7,
+    columnNumber: 5
+  }, this);
+}
+_c = CalendarRoute;
+export function Timeline() {
+  return /* @__PURE__ */ jsxDEV("section", { className: "content-section section-reveal", "aria-labelledby": "timeline-title", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "section-kicker", children: "План дня" }, void 0, false, {
+      fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+      lineNumber: 74,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("h2", { id: "timeline-title", children: "Тайминг" }, void 0, false, {
+      fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+      lineNumber: 75,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(CalendarRoute, {}, void 0, false, {
+      fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+      lineNumber: 76,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "timeline", role: "list", children: events.map(
+      (event) => /* @__PURE__ */ jsxDEV("article", { className: "timeline-card", role: "listitem", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "timeline-card__time", children: event.time }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+          lineNumber: 80,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "timeline-card__content", children: [
+          /* @__PURE__ */ jsxDEV("h3", { children: event.title }, void 0, false, {
+            fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+            lineNumber: 82,
+            columnNumber: 15
+          }, this),
+          /* @__PURE__ */ jsxDEV("p", { className: "timeline-card__place", children: event.place }, void 0, false, {
+            fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+            lineNumber: 83,
+            columnNumber: 15
+          }, this),
+          /* @__PURE__ */ jsxDEV("p", { children: event.note }, void 0, false, {
+            fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+            lineNumber: 84,
+            columnNumber: 15
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+          lineNumber: 81,
+          columnNumber: 13
+        }, this)
+      ] }, event.time, true, {
+        fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+        lineNumber: 79,
+        columnNumber: 9
+      }, this)
+    ) }, void 0, false, {
+      fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+      lineNumber: 77,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
+    lineNumber: 73,
+    columnNumber: 5
+  }, this);
+}
+_c2 = Timeline;
+var _c, _c2;
+$RefreshReg$(_c, "CalendarRoute");
+$RefreshReg$(_c2, "Timeline");
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("D:/code/site-welcome/src/components/Timeline.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("D:/code/site-welcome/src/components/Timeline.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+function $RefreshReg$(type, id) {
+  return RefreshRuntime.register(type, "D:/code/site-welcome/src/components/Timeline.tsx " + id);
+}
+function $RefreshSig$() {
+  return RefreshRuntime.createSignatureFunctionForTransform();
+}
+
+//# sourceMappingURL=data:application/json;base64,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QUFDLFNBQUksV0FBVSxZQUFXLE1BQUssUUFDNUJKLGlCQUFPSztBQUFBQSxNQUFJLENBQUNDLFVBQ1gsdUJBQUMsYUFBUSxXQUFVLGlCQUFnQixNQUFLLFlBQ3RDO0FBQUEsK0JBQUMsU0FBSSxXQUFVLHVCQUF1QkEsZ0JBQU1DLFFBQTVDO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFBaUQ7QUFBQSxRQUNqRCx1QkFBQyxTQUFJLFdBQVUsMEJBQ2I7QUFBQSxpQ0FBQyxRQUFJRCxnQkFBTUUsU0FBWDtBQUFBO0FBQUE7QUFBQTtBQUFBLGlCQUFpQjtBQUFBLFVBQ2pCLHVCQUFDLE9BQUUsV0FBVSx3QkFBd0JGLGdCQUFNRyxTQUEzQztBQUFBO0FBQUE7QUFBQTtBQUFBLGlCQUFpRDtBQUFBLFVBQ2pELHVCQUFDLE9BQUdILGdCQUFNSSxRQUFWO0FBQUE7QUFBQTtBQUFBO0FBQUEsaUJBQWU7QUFBQSxhQUhqQjtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBSUE7QUFBQSxXQU5zREosTUFBTUMsTUFBOUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQU9BO0FBQUEsSUFDRCxLQVZIO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FXQTtBQUFBLE9BZkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQWdCQTtBQUVKO0FBQUNJLE1BcEJlUDtBQUFRLElBQUFELElBQUFRO0FBQUEsYUFBQVIsSUFBQTtBQUFBLGFBQUFRLEtBQUEiLCJuYW1lcyI6WyJ3ZWRkaW5nIiwiZXZlbnRzIiwic2NoZWR1bGUiLCJDYWxlbmRhclJvdXRlIiwiX2MiLCJUaW1lbGluZSIsIm1hcCIsImV2ZW50IiwidGltZSIsInRpdGxlIiwicGxhY2UiLCJub3RlIiwiX2MyIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIlRpbWVsaW5lLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB3ZWRkaW5nIH0gZnJvbSAnLi4vZGF0YS93ZWRkaW5nJztcblxuY29uc3QgZXZlbnRzID0gd2VkZGluZy5zY2hlZHVsZTtcblxuZnVuY3Rpb24gQ2FsZW5kYXJSb3V0ZSgpIHtcbiAgcmV0dXJuIChcbiAgICA8ZGl2IGNsYXNzTmFtZT1cImNhbGVuZGFyLXJvdXRlXCIgYXJpYS1sYWJlbD1cItCa0LDQu9C10L3QtNCw0YDQvdGL0Lkg0LzQsNGA0YjRgNGD0YIg0YHQstCw0LTQtdCx0L3QvtCz0L4g0LTQvdGPXCI+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImNhbGVuZGFyLXJvdXRlX19tb250aFwiPtCY0Y7QvdGMIDIwMjY8L2Rpdj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY2FsZW5kYXItcm91dGVfX3dlZWtcIiBhcmlhLWxhYmVsPVwi0J3QtdC00LXQu9GPINGB0LLQsNC00YzQsdGLXCI+XG4gICAgICAgIDxkaXY+XG4gICAgICAgICAgPHNwYW4+0J/QnTwvc3Bhbj5cbiAgICAgICAgICA8c3Ryb25nPjIyPC9zdHJvbmc+XG4gICAgICAgIDwvZGl2PlxuICAgICAgICA8ZGl2PlxuICAgICAgICAgIDxzcGFuPtCS0KI8L3NwYW4+XG4gICAgICAgICAgPHN0cm9uZz4yMzwvc3Ryb25nPlxuICAgICAgICA8L2Rpdj5cbiAgICAgICAgPGRpdj5cbiAgICAgICAgICA8c3Bhbj7QodCgPC9zcGFuPlxuICAgICAgICAgIDxzdHJvbmc+MjQ8L3N0cm9uZz5cbiAgICAgICAgPC9kaXY+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaXMtd2VkZGluZy1kYXlcIj5cbiAgICAgICAgICA8c3Bhbj7Qp9CiPC9zcGFuPlxuICAgICAgICAgIDxzdHJvbmc+MjU8L3N0cm9uZz5cbiAgICAgICAgPC9kaXY+XG4gICAgICAgIDxkaXY+XG4gICAgICAgICAgPHNwYW4+0J/Qojwvc3Bhbj5cbiAgICAgICAgICA8c3Ryb25nPjI2PC9zdHJvbmc+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+XG5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY2FsZW5kYXItcm91dGVfX3BhdGhcIiBhcmlhLWhpZGRlbj1cInRydWVcIj5cbiAgICAgICAgPHN2ZyB2aWV3Qm94PVwiMCAwIDI2MCA1NjBcIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPVwibm9uZVwiPlxuICAgICAgICAgIDxwYXRoXG4gICAgICAgICAgICBkPVwiTTEzMiAxMiBDMTI4IDg2IDcwIDExOCA4NCAxODggQzEwMiAyNzggMTkwIDI2MCAxNzggMzUwIEMxNjYgNDM0IDkwIDQzMiAxMTQgNTQ4XCJcbiAgICAgICAgICAgIGZpbGw9XCJub25lXCJcbiAgICAgICAgICAvPlxuICAgICAgICA8L3N2Zz5cbiAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwiY2FsZW5kYXItcm91dGVfX2hlYXJ0IGNhbGVuZGFyLXJvdXRlX19oZWFydC0tdG9wXCI+MjU8L3NwYW4+XG4gICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cImNhbGVuZGFyLXJvdXRlX19oZWFydCBjYWxlbmRhci1yb3V0ZV9faGVhcnQtLW1pZGRsZVwiPjI1PC9zcGFuPlxuICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJjYWxlbmRhci1yb3V0ZV9fZG90XCIgLz5cbiAgICAgIDwvZGl2PlxuXG4gICAgICA8YXJ0aWNsZSBjbGFzc05hbWU9XCJjYWxlbmRhci1yb3V0ZV9fZXZlbnQgY2FsZW5kYXItcm91dGVfX2V2ZW50LS1jZXJlbW9ueVwiPlxuICAgICAgICA8dGltZT4xNDowMDwvdGltZT5cbiAgICAgICAgPGgzPtCh0LHQvtGAINCz0L7RgdGC0LXQuTwvaDM+XG4gICAgICAgIDxwPtCf0LXRgNC10LQg0YHQstCw0LTQtdCx0L3QvtC5INGG0LXRgNC10LzQvtC90LjQtdC5INCyINCm0LDRgNC40YbRi9C90L48L3A+XG4gICAgICA8L2FydGljbGU+XG5cbiAgICAgIDxhcnRpY2xlIGNsYXNzTmFtZT1cImNhbGVuZGFyLXJvdXRlX19ldmVudCBjYWxlbmRhci1yb3V0ZV9fZXZlbnQtLWNlcmVtb255LXN0YXJ0XCI+XG4gICAgICAgIDx0aW1lPjE0OjMwPC90aW1lPlxuICAgICAgICA8aDM+0KbQtdGA0LXQvNC+0L3QuNGPPC9oMz5cbiAgICAgICAgPHA+0J3QsNGH0LDQu9C+INGB0LLQsNC00LXQsdC90L7QuSDRhtC10YDQtdC80L7QvdC40Lg8L3A+XG4gICAgICA8L2FydGljbGU+XG5cbiAgICAgIDxhcnRpY2xlIGNsYXNzTmFtZT1cImNhbGVuZGFyLXJvdXRlX19ldmVudCBjYWxlbmRhci1yb3V0ZV9fZXZlbnQtLWJhbnF1ZXRcIj5cbiAgICAgICAgPHRpbWU+MTc6MDA8L3RpbWU+XG4gICAgICAgIDxoMz7QkdCw0L3QutC10YI8L2gzPlxuICAgICAgICA8cD7QndCw0YfQsNC70L4g0LHQsNC90LrQtdGC0LAg0LIgTGF1cmVuIFBhcmtlcjwvcD5cbiAgICAgIDwvYXJ0aWNsZT5cblxuICAgICAgPGFydGljbGUgY2xhc3NOYW1lPVwiY2FsZW5kYXItcm91dGVfX2V2ZW50IGNhbGVuZGFyLXJvdXRlX19ldmVudC0tZmluaXNoXCI+XG4gICAgICAgIDx0aW1lPjIzOjAwPC90aW1lPlxuICAgICAgICA8aDM+0JfQsNCy0LXRgNGI0LXQvdC40LU8L2gzPlxuICAgICAgICA8cD7Ql9Cw0LLQtdGA0YjQtdC90LjQtSDRgdCy0LDQtNC10LHQvdC+0LPQviDQstC10YfQtdGA0LA8L3A+XG4gICAgICA8L2FydGljbGU+XG4gICAgPC9kaXY+XG4gICk7XG59XG5cbmV4cG9ydCBmdW5jdGlvbiBUaW1lbGluZSgpIHtcbiAgcmV0dXJuIChcbiAgICA8c2VjdGlvbiBjbGFzc05hbWU9XCJjb250ZW50LXNlY3Rpb24gc2VjdGlvbi1yZXZlYWxcIiBhcmlhLWxhYmVsbGVkYnk9XCJ0aW1lbGluZS10aXRsZVwiPlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJzZWN0aW9uLWtpY2tlclwiPtCf0LvQsNC9INC00L3RjzwvZGl2PlxuICAgICAgPGgyIGlkPVwidGltZWxpbmUtdGl0bGVcIj7QotCw0LnQvNC40L3QszwvaDI+XG4gICAgICA8Q2FsZW5kYXJSb3V0ZSAvPlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJ0aW1lbGluZVwiIHJvbGU9XCJsaXN0XCI+XG4gICAgICAgIHtldmVudHMubWFwKChldmVudCkgPT4gKFxuICAgICAgICAgIDxhcnRpY2xlIGNsYXNzTmFtZT1cInRpbWVsaW5lLWNhcmRcIiByb2xlPVwibGlzdGl0ZW1cIiBrZXk9e2V2ZW50LnRpbWV9PlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ0aW1lbGluZS1jYXJkX190aW1lXCI+e2V2ZW50LnRpbWV9PC9kaXY+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRpbWVsaW5lLWNhcmRfX2NvbnRlbnRcIj5cbiAgICAgICAgICAgICAgPGgzPntldmVudC50aXRsZX08L2gzPlxuICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0aW1lbGluZS1jYXJkX19wbGFjZVwiPntldmVudC5wbGFjZX08L3A+XG4gICAgICAgICAgICAgIDxwPntldmVudC5ub3RlfTwvcD5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDwvYXJ0aWNsZT5cbiAgICAgICAgKSl9XG4gICAgICA8L2Rpdj5cbiAgICA8L3NlY3Rpb24+XG4gICk7XG59XG4iXSwiZmlsZSI6IkQ6L2NvZGUvc2l0ZS13ZWxjb21lL3NyYy9jb21wb25lbnRzL1RpbWVsaW5lLnRzeCJ9

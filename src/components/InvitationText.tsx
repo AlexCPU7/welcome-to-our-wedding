@@ -1,7 +1,6 @@
-export function InvitationText() {
-  const firstPhoto = `${import.meta.env.BASE_URL}images/couple-top-left.jpg`;
-  const secondPhoto = `${import.meta.env.BASE_URL}images/couple-bottom-right.jpg`;
+import { wedding } from '../data/wedding';
 
+export function InvitationText() {
   return (
     <section className="content-section section-reveal" aria-labelledby="invitation-title">
       <div className="section-kicker">Приглашение</div>
@@ -38,12 +37,28 @@ export function InvitationText() {
           «Царицыно» к 14:00.
         </p>
       </div>
-      <div className="pearl-polaroids" aria-hidden="true">
+      <div className="pearl-polaroids" aria-label="?????????? ???? ??????????">
         <figure className="pearl-polaroid pearl-polaroid--left">
-          <img src={firstPhoto} alt="" loading="lazy" />
+          <img
+            src={wedding.ceremony.photo}
+            alt={wedding.ceremony.photoAlt}
+            loading="lazy"
+            onError={(event) => {
+              event.currentTarget.src = wedding.ceremony.photoFallback;
+            }}
+          />
+          <figcaption>{wedding.ceremony.time}</figcaption>
         </figure>
         <figure className="pearl-polaroid pearl-polaroid--right">
-          <img src={secondPhoto} alt="" loading="lazy" />
+          <img
+            src={wedding.banquet.photo}
+            alt={wedding.banquet.photoAlt}
+            loading="lazy"
+            onError={(event) => {
+              event.currentTarget.src = wedding.banquet.photoFallback;
+            }}
+          />
+          <figcaption>{wedding.banquet.time}</figcaption>
         </figure>
       </div>
     </section>

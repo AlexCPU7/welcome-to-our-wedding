@@ -10,7 +10,7 @@ export function PearlDateBlock() {
         <p>разделить с Вами радость неповторимого для нас дня — дня нашей свадьбы!</p>
         <div className="pearl-date-mark" aria-label="25 июня 2026 года">
           <span>25.06</span>
-          <em>day</em>
+          <em>июня</em>
           <strong>2026</strong>
         </div>
       </div>
@@ -37,19 +37,19 @@ export function PearlCountdownBlock() {
         <div className="pearl-countdown__timer" aria-label="Обратный отсчёт до свадьбы">
           <span>
             <strong>{countdown.days}</strong>
-            <em>days</em>
+            <em>дней</em>
           </span>
           <span>
             <strong>{countdown.hours}</strong>
-            <em>hours</em>
+            <em>часов</em>
           </span>
           <span>
             <strong>{countdown.minutes}</strong>
-            <em>minutes</em>
+            <em>минут</em>
           </span>
           <span>
             <strong>{countdown.seconds}</strong>
-            <em>seconds</em>
+            <em>секунд</em>
           </span>
         </div>
       </div>

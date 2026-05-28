@@ -1,0 +1,250 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/Hero.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=31783b42"; const Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"]; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import { wedding } from "/src/data/wedding.ts";
+import { getWeddingCountdownLabel } from "/src/utils/date.ts";
+export function Hero() {
+  return /* @__PURE__ */ jsxDEV(Fragment, { children: [
+    /* @__PURE__ */ jsxDEV("section", { className: "hero section-reveal", "aria-labelledby": "hero-title", children: /* @__PURE__ */ jsxDEV("div", { className: "hero__standard", children: [
+      /* @__PURE__ */ jsxDEV("p", { className: "eyebrow", children: "Свадебное приглашение" }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+        lineNumber: 9,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV("h1", { id: "hero-title", className: "hero__title", children: [
+        wedding.couple.groom,
+        /* @__PURE__ */ jsxDEV("span", { children: "&" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+          lineNumber: 12,
+          columnNumber: 13
+        }, this),
+        wedding.couple.bride
+      ] }, void 0, true, {
+        fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+        lineNumber: 10,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV("p", { className: "hero__date", children: [
+        wedding.date.label,
+        " · ",
+        wedding.date.weekday
+      ] }, void 0, true, {
+        fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+        lineNumber: 15,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV("p", { className: "hero__lead", children: "Мы будем счастливы разделить с вами этот особенный день." }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+        lineNumber: 18,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "hero__meta", "aria-label": getWeddingCountdownLabel(wedding.date.iso), children: getWeddingCountdownLabel(wedding.date.iso) }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+        lineNumber: 21,
+        columnNumber: 11
+      }, this)
+    ] }, void 0, true, {
+      fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+      lineNumber: 8,
+      columnNumber: 9
+    }, this) }, void 0, false, {
+      fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+      lineNumber: 7,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("section", { className: "reference-hero content-section section-reveal", "aria-labelledby": "reference-hero-title", children: [
+      /* @__PURE__ */ jsxDEV("p", { className: "reference-hero__brand", children: "A&M" }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+        lineNumber: 28,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("p", { className: "reference-hero__script", id: "reference-hero-title", children: [
+        "Приглашение",
+        /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+          lineNumber: 31,
+          columnNumber: 11
+        }, this),
+        "на свадьбу"
+      ] }, void 0, true, {
+        fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+        lineNumber: 29,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "reference-card reference-card--main", children: [
+        /* @__PURE__ */ jsxDEV("p", { className: "reference-card__kicker", children: "приглашение на свадьбу" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+          lineNumber: 36,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "reference-card__initials", children: [
+          /* @__PURE__ */ jsxDEV("span", { children: "А" }, void 0, false, {
+            fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+            lineNumber: 38,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("em", { children: "&" }, void 0, false, {
+            fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+            lineNumber: 39,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { children: "М" }, void 0, false, {
+            fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+            lineNumber: 40,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+          lineNumber: 37,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "reference-card__photo", children: /* @__PURE__ */ jsxDEV("span", { children: wedding.couple.label }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+          lineNumber: 43,
+          columnNumber: 13
+        }, this) }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+          lineNumber: 42,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("p", { className: "reference-card__note", children: "мы женимся!" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+          lineNumber: 45,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("time", { children: wedding.date.label }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+          lineNumber: 46,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("svg", { className: "reference-card__line", viewBox: "0 0 320 76", preserveAspectRatio: "none", children: /* @__PURE__ */ jsxDEV("path", { d: "M0 44 C58 10 82 82 142 42 C198 5 210 75 320 32" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+          lineNumber: 48,
+          columnNumber: 13
+        }, this) }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+          lineNumber: 47,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+        lineNumber: 35,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+      lineNumber: 27,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("section", { className: "reference-details content-section section-reveal", "aria-labelledby": "reference-details-title", children: /* @__PURE__ */ jsxDEV("article", { className: "reference-card reference-card--route", children: [
+      /* @__PURE__ */ jsxDEV("h2", { id: "reference-details-title", children: "Дорогие родные и близкие!" }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+        lineNumber: 55,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV("p", { children: "Будем счастливы разделить с вами день нашей свадьбы." }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+        lineNumber: 56,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "reference-card__mini-layout", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "reference-card__mini-calendar", children: [
+          /* @__PURE__ */ jsxDEV("span", { children: "Июнь 2026" }, void 0, false, {
+            fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+            lineNumber: 59,
+            columnNumber: 15
+          }, this),
+          /* @__PURE__ */ jsxDEV("strong", { children: "25" }, void 0, false, {
+            fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+            lineNumber: 60,
+            columnNumber: 15
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+          lineNumber: 58,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "reference-card__mini-events", children: [
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("time", { children: "14:00" }, void 0, false, {
+              fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+              lineNumber: 64,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ jsxDEV("span", { children: "Церемония в Царицыно" }, void 0, false, {
+              fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+              lineNumber: 65,
+              columnNumber: 17
+            }, this)
+          ] }, void 0, true, {
+            fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+            lineNumber: 63,
+            columnNumber: 15
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("time", { children: "17:00" }, void 0, false, {
+              fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+              lineNumber: 68,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ jsxDEV("span", { children: "Встреча гостей в Lauren Parker" }, void 0, false, {
+              fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+              lineNumber: 69,
+              columnNumber: 17
+            }, this)
+          ] }, void 0, true, {
+            fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+            lineNumber: 67,
+            columnNumber: 15
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+          lineNumber: 62,
+          columnNumber: 13
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+        lineNumber: 57,
+        columnNumber: 11
+      }, this)
+    ] }, void 0, true, {
+      fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+      lineNumber: 54,
+      columnNumber: 9
+    }, this) }, void 0, false, {
+      fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+      lineNumber: 53,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "D:/code/site-welcome/src/components/Hero.tsx",
+    lineNumber: 6,
+    columnNumber: 5
+  }, this);
+}
+_c = Hero;
+var _c;
+$RefreshReg$(_c, "Hero");
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("D:/code/site-welcome/src/components/Hero.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("D:/code/site-welcome/src/components/Hero.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+function $RefreshReg$(type, id) {
+  return RefreshRuntime.register(type, "D:/code/site-welcome/src/components/Hero.tsx " + id);
+}
+function $RefreshSig$() {
+  return RefreshRuntime.createSignatureFunctionForTransform();
+}
+
+//# sourceMappingURL=data:application/json;base64,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QUFBO0FBQUEsU0FxRUE7QUFFSjtBQUFDRyxLQXpFZVI7QUFBSSxJQUFBUTtBQUFBLGFBQUFBLElBQUEiLCJuYW1lcyI6WyJ3ZWRkaW5nIiwiZ2V0V2VkZGluZ0NvdW50ZG93bkxhYmVsIiwiSGVybyIsImNvdXBsZSIsImdyb29tIiwiYnJpZGUiLCJkYXRlIiwibGFiZWwiLCJ3ZWVrZGF5IiwiaXNvIiwiX2MiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiSGVyby50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgd2VkZGluZyB9IGZyb20gJy4uL2RhdGEvd2VkZGluZyc7XG5pbXBvcnQgeyBnZXRXZWRkaW5nQ291bnRkb3duTGFiZWwgfSBmcm9tICcuLi91dGlscy9kYXRlJztcblxuZXhwb3J0IGZ1bmN0aW9uIEhlcm8oKSB7XG4gIHJldHVybiAoXG4gICAgPD5cbiAgICAgIDxzZWN0aW9uIGNsYXNzTmFtZT1cImhlcm8gc2VjdGlvbi1yZXZlYWxcIiBhcmlhLWxhYmVsbGVkYnk9XCJoZXJvLXRpdGxlXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaGVyb19fc3RhbmRhcmRcIj5cbiAgICAgICAgICA8cCBjbGFzc05hbWU9XCJleWVicm93XCI+0KHQstCw0LTQtdCx0L3QvtC1INC/0YDQuNCz0LvQsNGI0LXQvdC40LU8L3A+XG4gICAgICAgICAgPGgxIGlkPVwiaGVyby10aXRsZVwiIGNsYXNzTmFtZT1cImhlcm9fX3RpdGxlXCI+XG4gICAgICAgICAgICB7d2VkZGluZy5jb3VwbGUuZ3Jvb219XG4gICAgICAgICAgICA8c3Bhbj4mYW1wOzwvc3Bhbj5cbiAgICAgICAgICAgIHt3ZWRkaW5nLmNvdXBsZS5icmlkZX1cbiAgICAgICAgICA8L2gxPlxuICAgICAgICAgIDxwIGNsYXNzTmFtZT1cImhlcm9fX2RhdGVcIj5cbiAgICAgICAgICAgIHt3ZWRkaW5nLmRhdGUubGFiZWx9IMK3IHt3ZWRkaW5nLmRhdGUud2Vla2RheX1cbiAgICAgICAgICA8L3A+XG4gICAgICAgICAgPHAgY2xhc3NOYW1lPVwiaGVyb19fbGVhZFwiPlxuICAgICAgICAgICAg0JzRiyDQsdGD0LTQtdC8INGB0YfQsNGB0YLQu9C40LLRiyDRgNCw0LfQtNC10LvQuNGC0Ywg0YEg0LLQsNC80Lgg0Y3RgtC+0YIg0L7RgdC+0LHQtdC90L3Ri9C5INC00LXQvdGMLlxuICAgICAgICAgIDwvcD5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImhlcm9fX21ldGFcIiBhcmlhLWxhYmVsPXtnZXRXZWRkaW5nQ291bnRkb3duTGFiZWwod2VkZGluZy5kYXRlLmlzbyl9PlxuICAgICAgICAgICAge2dldFdlZGRpbmdDb3VudGRvd25MYWJlbCh3ZWRkaW5nLmRhdGUuaXNvKX1cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L3NlY3Rpb24+XG5cbiAgICAgIDxzZWN0aW9uIGNsYXNzTmFtZT1cInJlZmVyZW5jZS1oZXJvIGNvbnRlbnQtc2VjdGlvbiBzZWN0aW9uLXJldmVhbFwiIGFyaWEtbGFiZWxsZWRieT1cInJlZmVyZW5jZS1oZXJvLXRpdGxlXCI+XG4gICAgICAgIDxwIGNsYXNzTmFtZT1cInJlZmVyZW5jZS1oZXJvX19icmFuZFwiPkEmTTwvcD5cbiAgICAgICAgPHAgY2xhc3NOYW1lPVwicmVmZXJlbmNlLWhlcm9fX3NjcmlwdFwiIGlkPVwicmVmZXJlbmNlLWhlcm8tdGl0bGVcIj5cbiAgICAgICAgICDQn9GA0LjQs9C70LDRiNC10L3QuNC1XG4gICAgICAgICAgPGJyIC8+XG4gICAgICAgICAg0L3QsCDRgdCy0LDQtNGM0LHRg1xuICAgICAgICA8L3A+XG5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJyZWZlcmVuY2UtY2FyZCByZWZlcmVuY2UtY2FyZC0tbWFpblwiPlxuICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInJlZmVyZW5jZS1jYXJkX19raWNrZXJcIj7Qv9GA0LjQs9C70LDRiNC10L3QuNC1INC90LAg0YHQstCw0LTRjNCx0YM8L3A+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJyZWZlcmVuY2UtY2FyZF9faW5pdGlhbHNcIj5cbiAgICAgICAgICAgIDxzcGFuPtCQPC9zcGFuPlxuICAgICAgICAgICAgPGVtPiZhbXA7PC9lbT5cbiAgICAgICAgICAgIDxzcGFuPtCcPC9zcGFuPlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicmVmZXJlbmNlLWNhcmRfX3Bob3RvXCI+XG4gICAgICAgICAgICA8c3Bhbj57d2VkZGluZy5jb3VwbGUubGFiZWx9PC9zcGFuPlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInJlZmVyZW5jZS1jYXJkX19ub3RlXCI+0LzRiyDQttC10L3QuNC80YHRjyE8L3A+XG4gICAgICAgICAgPHRpbWU+e3dlZGRpbmcuZGF0ZS5sYWJlbH08L3RpbWU+XG4gICAgICAgICAgPHN2ZyBjbGFzc05hbWU9XCJyZWZlcmVuY2UtY2FyZF9fbGluZVwiIHZpZXdCb3g9XCIwIDAgMzIwIDc2XCIgcHJlc2VydmVBc3BlY3RSYXRpbz1cIm5vbmVcIj5cbiAgICAgICAgICAgIDxwYXRoIGQ9XCJNMCA0NCBDNTggMTAgODIgODIgMTQyIDQyIEMxOTggNSAyMTAgNzUgMzIwIDMyXCIgLz5cbiAgICAgICAgICA8L3N2Zz5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L3NlY3Rpb24+XG5cbiAgICAgIDxzZWN0aW9uIGNsYXNzTmFtZT1cInJlZmVyZW5jZS1kZXRhaWxzIGNvbnRlbnQtc2VjdGlvbiBzZWN0aW9uLXJldmVhbFwiIGFyaWEtbGFiZWxsZWRieT1cInJlZmVyZW5jZS1kZXRhaWxzLXRpdGxlXCI+XG4gICAgICAgIDxhcnRpY2xlIGNsYXNzTmFtZT1cInJlZmVyZW5jZS1jYXJkIHJlZmVyZW5jZS1jYXJkLS1yb3V0ZVwiPlxuICAgICAgICAgIDxoMiBpZD1cInJlZmVyZW5jZS1kZXRhaWxzLXRpdGxlXCI+0JTQvtGA0L7Qs9C40LUg0YDQvtC00L3Ri9C1INC4INCx0LvQuNC30LrQuNC1ITwvaDI+XG4gICAgICAgICAgPHA+0JHRg9C00LXQvCDRgdGH0LDRgdGC0LvQuNCy0Ysg0YDQsNC30LTQtdC70LjRgtGMINGBINCy0LDQvNC4INC00LXQvdGMINC90LDRiNC10Lkg0YHQstCw0LTRjNCx0YsuPC9wPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicmVmZXJlbmNlLWNhcmRfX21pbmktbGF5b3V0XCI+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInJlZmVyZW5jZS1jYXJkX19taW5pLWNhbGVuZGFyXCI+XG4gICAgICAgICAgICAgIDxzcGFuPtCY0Y7QvdGMIDIwMjY8L3NwYW4+XG4gICAgICAgICAgICAgIDxzdHJvbmc+MjU8L3N0cm9uZz5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJyZWZlcmVuY2UtY2FyZF9fbWluaS1ldmVudHNcIj5cbiAgICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICA8dGltZT4xNDowMDwvdGltZT5cbiAgICAgICAgICAgICAgICA8c3Bhbj7QptC10YDQtdC80L7QvdC40Y8g0LIg0KbQsNGA0LjRhtGL0L3Qvjwvc3Bhbj5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgPHRpbWU+MTc6MDA8L3RpbWU+XG4gICAgICAgICAgICAgICAgPHNwYW4+0JLRgdGC0YDQtdGH0LAg0LPQvtGB0YLQtdC5INCyIExhdXJlbiBQYXJrZXI8L3NwYW4+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvYXJ0aWNsZT5cbiAgICAgIDwvc2VjdGlvbj5cbiAgICA8Lz5cbiAgKTtcbn1cbiJdLCJmaWxlIjoiRDovY29kZS9zaXRlLXdlbGNvbWUvc3JjL2NvbXBvbmVudHMvSGVyby50c3gifQ==

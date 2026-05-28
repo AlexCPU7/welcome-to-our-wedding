@@ -6,6 +6,7 @@ export function Hero() {
     <>
       <section className="hero section-reveal" aria-labelledby="hero-title">
         <div className="hero__standard">
+          <div className="hero__monogram" aria-hidden="true">A&amp;M</div>
           <p className="eyebrow">Свадебное приглашение</p>
           <h1 id="hero-title" className="hero__title">
             {wedding.couple.groom}

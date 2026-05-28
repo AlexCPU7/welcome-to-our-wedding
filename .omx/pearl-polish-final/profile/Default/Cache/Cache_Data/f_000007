@@ -1,0 +1,182 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/InvitationText.tsx");import.meta.env = {"BASE_URL": "/", "DEV": true, "MODE": "development", "PROD": false, "SSR": false, "VITE_RSVP_ENDPOINT": "https://script.google.com/macros/s/AKfycbwbSXxcYxhvoZwXdf6s9cZ6cowwOVy31y8HM7jlnCZ520OiSLcGiao7iEE79tClxwL--A/exec"};import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=31783b42"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+export function InvitationText() {
+  const firstPhoto = `${import.meta.env.BASE_URL}images/couple-top-left.jpg`;
+  const secondPhoto = `${import.meta.env.BASE_URL}images/couple-bottom-right.jpg`;
+  return /* @__PURE__ */ jsxDEV("section", { className: "content-section section-reveal", "aria-labelledby": "invitation-title", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "section-kicker", children: "Приглашение" }, void 0, false, {
+      fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+      lineNumber: 7,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("h2", { id: "invitation-title", children: "Дорогие гости!" }, void 0, false, {
+      fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+      lineNumber: 8,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "sketch-calendar", "aria-label": "Дата свадьбы — 25 июня 2026 года", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "sketch-calendar__top", children: [
+        /* @__PURE__ */ jsxDEV("span", { children: "Июнь" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+          lineNumber: 11,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { children: "2026" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+          lineNumber: 12,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+        lineNumber: 10,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "sketch-calendar__weekdays", children: [
+        /* @__PURE__ */ jsxDEV("span", { children: "среда" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+          lineNumber: 15,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { children: "четверг" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+          lineNumber: 16,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { children: "пятница" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+          lineNumber: 17,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+        lineNumber: 14,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "sketch-calendar__dates", children: [
+        /* @__PURE__ */ jsxDEV("span", { children: "24" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+          lineNumber: 20,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("strong", { children: [
+          /* @__PURE__ */ jsxDEV("svg", { className: "sketch-calendar__heart", viewBox: "0 0 150 112", "aria-hidden": "true", children: /* @__PURE__ */ jsxDEV("path", { d: "M75 99 C58 79 39 65 29 44 C23 31 35 20 51 20 C63 20 72 27 75 34 C80 26 89 20 100 20 C116 20 128 33 122 49 C114 70 92 84 75 99 Z" }, void 0, false, {
+            fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+            lineNumber: 23,
+            columnNumber: 15
+          }, this) }, void 0, false, {
+            fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+            lineNumber: 22,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { children: "25" }, void 0, false, {
+            fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+            lineNumber: 25,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+          lineNumber: 21,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { children: "26" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+          lineNumber: 27,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+        lineNumber: 19,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+      lineNumber: 9,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "prose centered invitation-prose", children: [
+      /* @__PURE__ */ jsxDEV("p", { children: "Мы будем счастливы разделить с Вами радость неповторимого для нас дня -дня нашей свадьбы! Приглашаем присоединиться к нашему празднику и украсить его своим присутствием 25 июня!" }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+        lineNumber: 31,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("p", { children: "Основной сбор гостей состоится в ресторане Lauren Parker в 17:00. Для тех, кто хочет присутствовать на свадебной церемонии, мы будем ждать вас в Оперном доме музея-заповедника «Царицыно» к 14:00." }, void 0, false, {
+        fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+        lineNumber: 35,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+      lineNumber: 30,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "pearl-polaroids", "aria-label": "Фотографии пары", children: [
+      /* @__PURE__ */ jsxDEV("figure", { className: "pearl-polaroid pearl-polaroid--left", children: [
+        /* @__PURE__ */ jsxDEV("img", { src: firstPhoto, alt: "Алексей и Марина", loading: "lazy" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+          lineNumber: 43,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("figcaption", { children: "ждём вас" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+          lineNumber: 44,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+        lineNumber: 42,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("figure", { className: "pearl-polaroid pearl-polaroid--right", children: [
+        /* @__PURE__ */ jsxDEV("img", { src: secondPhoto, alt: "Алексей и Марина", loading: "lazy" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+          lineNumber: 47,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("figcaption", { children: "25.06" }, void 0, false, {
+          fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+          lineNumber: 48,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+        lineNumber: 46,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+      lineNumber: 41,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
+    lineNumber: 6,
+    columnNumber: 5
+  }, this);
+}
+_c = InvitationText;
+var _c;
+$RefreshReg$(_c, "InvitationText");
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("D:/code/site-welcome/src/components/InvitationText.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("D:/code/site-welcome/src/components/InvitationText.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+function $RefreshReg$(type, id) {
+  return RefreshRuntime.register(type, "D:/code/site-welcome/src/components/InvitationText.tsx " + id);
+}
+function $RefreshSig$() {
+  return RefreshRuntime.createSignatureFunctionForTransform();
+}
+
+//# sourceMappingURL=data:application/json;base64,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QUE7QUFBQSxXQVNBO0FBQUEsT0E1Q0Y7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQTZDQTtBQUVKO0FBQUNDLEtBcERlTjtBQUFjLElBQUFNO0FBQUEsYUFBQUEsSUFBQSIsIm5hbWVzIjpbIkludml0YXRpb25UZXh0IiwiZmlyc3RQaG90byIsImltcG9ydCIsImVudiIsIkJBU0VfVVJMIiwic2Vjb25kUGhvdG8iLCJfYyJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJJbnZpdGF0aW9uVGV4dC50c3giXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGZ1bmN0aW9uIEludml0YXRpb25UZXh0KCkge1xyXG4gIGNvbnN0IGZpcnN0UGhvdG8gPSBgJHtpbXBvcnQubWV0YS5lbnYuQkFTRV9VUkx9aW1hZ2VzL2NvdXBsZS10b3AtbGVmdC5qcGdgO1xyXG4gIGNvbnN0IHNlY29uZFBob3RvID0gYCR7aW1wb3J0Lm1ldGEuZW52LkJBU0VfVVJMfWltYWdlcy9jb3VwbGUtYm90dG9tLXJpZ2h0LmpwZ2A7XHJcblxyXG4gIHJldHVybiAoXHJcbiAgICA8c2VjdGlvbiBjbGFzc05hbWU9XCJjb250ZW50LXNlY3Rpb24gc2VjdGlvbi1yZXZlYWxcIiBhcmlhLWxhYmVsbGVkYnk9XCJpbnZpdGF0aW9uLXRpdGxlXCI+XHJcbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwic2VjdGlvbi1raWNrZXJcIj7Qn9GA0LjQs9C70LDRiNC10L3QuNC1PC9kaXY+XHJcbiAgICAgIDxoMiBpZD1cImludml0YXRpb24tdGl0bGVcIj7QlNC+0YDQvtCz0LjQtSDQs9C+0YHRgtC4ITwvaDI+XHJcbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwic2tldGNoLWNhbGVuZGFyXCIgYXJpYS1sYWJlbD1cItCU0LDRgtCwINGB0LLQsNC00YzQsdGLIOKAlCAyNSDQuNGO0L3RjyAyMDI2INCz0L7QtNCwXCI+XHJcbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJza2V0Y2gtY2FsZW5kYXJfX3RvcFwiPlxyXG4gICAgICAgICAgPHNwYW4+0JjRjtC90Yw8L3NwYW4+XHJcbiAgICAgICAgICA8c3Bhbj4yMDI2PC9zcGFuPlxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwic2tldGNoLWNhbGVuZGFyX193ZWVrZGF5c1wiPlxyXG4gICAgICAgICAgPHNwYW4+0YHRgNC10LTQsDwvc3Bhbj5cclxuICAgICAgICAgIDxzcGFuPtGH0LXRgtCy0LXRgNCzPC9zcGFuPlxyXG4gICAgICAgICAgPHNwYW4+0L/Rj9GC0L3QuNGG0LA8L3NwYW4+XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJza2V0Y2gtY2FsZW5kYXJfX2RhdGVzXCI+XHJcbiAgICAgICAgICA8c3Bhbj4yNDwvc3Bhbj5cclxuICAgICAgICAgIDxzdHJvbmc+XHJcbiAgICAgICAgICAgIDxzdmcgY2xhc3NOYW1lPVwic2tldGNoLWNhbGVuZGFyX19oZWFydFwiIHZpZXdCb3g9XCIwIDAgMTUwIDExMlwiIGFyaWEtaGlkZGVuPVwidHJ1ZVwiPlxyXG4gICAgICAgICAgICAgIDxwYXRoIGQ9XCJNNzUgOTkgQzU4IDc5IDM5IDY1IDI5IDQ0IEMyMyAzMSAzNSAyMCA1MSAyMCBDNjMgMjAgNzIgMjcgNzUgMzQgQzgwIDI2IDg5IDIwIDEwMCAyMCBDMTE2IDIwIDEyOCAzMyAxMjIgNDkgQzExNCA3MCA5MiA4NCA3NSA5OSBaXCIgLz5cclxuICAgICAgICAgICAgPC9zdmc+XHJcbiAgICAgICAgICAgIDxzcGFuPjI1PC9zcGFuPlxyXG4gICAgICAgICAgPC9zdHJvbmc+XHJcbiAgICAgICAgICA8c3Bhbj4yNjwvc3Bhbj5cclxuICAgICAgICA8L2Rpdj5cclxuICAgICAgPC9kaXY+XHJcbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwicHJvc2UgY2VudGVyZWQgaW52aXRhdGlvbi1wcm9zZVwiPlxyXG4gICAgICAgIDxwPlxyXG4gICAgICAgICAg0JzRiyDQsdGD0LTQtdC8INGB0YfQsNGB0YLQu9C40LLRiyDRgNCw0LfQtNC10LvQuNGC0Ywg0YEg0JLQsNC80Lgg0YDQsNC00L7RgdGC0Ywg0L3QtdC/0L7QstGC0L7RgNC40LzQvtCz0L4g0LTQu9GPINC90LDRgSDQtNC90Y8gLdC00L3RjyDQvdCw0YjQtdC5INGB0LLQsNC00YzQsdGLIVxyXG4gICAgICAgICAg0J/RgNC40LPQu9Cw0YjQsNC10Lwg0L/RgNC40YHQvtC10LTQuNC90LjRgtGM0YHRjyDQuiDQvdCw0YjQtdC80YMg0L/RgNCw0LfQtNC90LjQutGDINC4INGD0LrRgNCw0YHQuNGC0Ywg0LXQs9C+INGB0LLQvtC40Lwg0L/RgNC40YHRg9GC0YHRgtCy0LjQtdC8IDI1INC40Y7QvdGPIVxyXG4gICAgICAgIDwvcD5cclxuICAgICAgICA8cD5cclxuICAgICAgICAgINCe0YHQvdC+0LLQvdC+0Lkg0YHQsdC+0YAg0LPQvtGB0YLQtdC5INGB0L7RgdGC0L7QuNGC0YHRjyDQsiDRgNC10YHRgtC+0YDQsNC90LUgTGF1cmVuIFBhcmtlciDQsiAxNzowMC4g0JTQu9GPINGC0LXRhSwg0LrRgtC+INGF0L7Rh9C10YJcclxuICAgICAgICAgINC/0YDQuNGB0YPRgtGB0YLQstC+0LLQsNGC0Ywg0L3QsCDRgdCy0LDQtNC10LHQvdC+0Lkg0YbQtdGA0LXQvNC+0L3QuNC4LCDQvNGLINCx0YPQtNC10Lwg0LbQtNCw0YLRjCDQstCw0YEg0LIg0J7Qv9C10YDQvdC+0Lwg0LTQvtC80LUg0LzRg9C30LXRjy3Qt9Cw0L/QvtCy0LXQtNC90LjQutCwXHJcbiAgICAgICAgICDCq9Cm0LDRgNC40YbRi9C90L7CuyDQuiAxNDowMC5cclxuICAgICAgICA8L3A+XHJcbiAgICAgIDwvZGl2PlxyXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cInBlYXJsLXBvbGFyb2lkc1wiIGFyaWEtbGFiZWw9XCLQpNC+0YLQvtCz0YDQsNGE0LjQuCDQv9Cw0YDRi1wiPlxyXG4gICAgICAgIDxmaWd1cmUgY2xhc3NOYW1lPVwicGVhcmwtcG9sYXJvaWQgcGVhcmwtcG9sYXJvaWQtLWxlZnRcIj5cclxuICAgICAgICAgIDxpbWcgc3JjPXtmaXJzdFBob3RvfSBhbHQ9XCLQkNC70LXQutGB0LXQuSDQuCDQnNCw0YDQuNC90LBcIiBsb2FkaW5nPVwibGF6eVwiIC8+XHJcbiAgICAgICAgICA8ZmlnY2FwdGlvbj7QttC00ZHQvCDQstCw0YE8L2ZpZ2NhcHRpb24+XHJcbiAgICAgICAgPC9maWd1cmU+XHJcbiAgICAgICAgPGZpZ3VyZSBjbGFzc05hbWU9XCJwZWFybC1wb2xhcm9pZCBwZWFybC1wb2xhcm9pZC0tcmlnaHRcIj5cclxuICAgICAgICAgIDxpbWcgc3JjPXtzZWNvbmRQaG90b30gYWx0PVwi0JDQu9C10LrRgdC10Lkg0Lgg0JzQsNGA0LjQvdCwXCIgbG9hZGluZz1cImxhenlcIiAvPlxyXG4gICAgICAgICAgPGZpZ2NhcHRpb24+MjUuMDY8L2ZpZ2NhcHRpb24+XHJcbiAgICAgICAgPC9maWd1cmU+XHJcbiAgICAgIDwvZGl2PlxyXG4gICAgPC9zZWN0aW9uPlxyXG4gICk7XHJcbn1cclxuIl0sImZpbGUiOiJEOi9jb2RlL3NpdGUtd2VsY29tZS9zcmMvY29tcG9uZW50cy9JbnZpdGF0aW9uVGV4dC50c3gifQ==
