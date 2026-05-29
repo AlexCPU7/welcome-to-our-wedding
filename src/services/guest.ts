@@ -24,7 +24,7 @@ function createUuid() {
 function getOrCreateAnonymousUuid() {
   const savedUuid = window.localStorage.getItem(ANONYMOUS_GUEST_KEY);
 
-  if (savedUuid && uuidPattern.test(savedUuid)) {
+  if (savedUuid) {
     return savedUuid;
   }
 
@@ -35,14 +35,17 @@ function getOrCreateAnonymousUuid() {
 
 export function getGuestUuid(): GuestIdentity {
   const params = new URLSearchParams(window.location.search);
-  const uuidFromLink = params.get('uuid')?.trim() ?? '';
 
-  if (uuidFromLink && uuidPattern.test(uuidFromLink)) {
-    return {
-      uuid: uuidFromLink,
-      source: 'link',
-      isValidLinkUuid: true,
-    };
+  if (params.has('uuid')) {
+    const uuidFromLink = params.get('uuid') ?? '';
+
+    if (uuidFromLink !== '') {
+      return {
+        uuid: uuidFromLink,
+        source: 'link',
+        isValidLinkUuid: uuidPattern.test(uuidFromLink),
+      };
+    }
   }
 
   return {

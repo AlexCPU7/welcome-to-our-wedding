@@ -15,6 +15,16 @@ function normalizeStoredRevision(value: unknown) {
   return typeof value === 'number' && Number.isFinite(value) && value >= 0 ? value : 0;
 }
 
+function normalizeDrinkValues(drinks: unknown): RsvpAnswers['drinks'] {
+  if (!Array.isArray(drinks)) {
+    return [];
+  }
+
+  return drinks
+    .map((drink) => (drink === 'will_not_drink_alcohol' ? 'no_alcohol' : drink))
+    .filter((drink): drink is RsvpAnswers['drinks'][number] => typeof drink === 'string');
+}
+
 export function loadStoredRsvp(guestUuid: string): StoredRsvp | null {
   try {
     const rawValue = window.localStorage.getItem(makeStorageKey(guestUuid));
@@ -30,7 +40,7 @@ export function loadStoredRsvp(guestUuid: string): StoredRsvp | null {
       answers: {
         ...defaultRsvpAnswers,
         ...parsed.answers,
-        drinks: Array.isArray(parsed.answers?.drinks) ? parsed.answers.drinks : [],
+        drinks: normalizeDrinkValues(parsed.answers?.drinks),
       },
       pendingSync: Boolean(parsed.pendingSync),
       updatedAt: parsed.updatedAt ?? new Date().toISOString(),

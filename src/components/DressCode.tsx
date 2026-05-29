@@ -5,6 +5,9 @@ export function DressCode() {
     <section className="content-section section-reveal" aria-labelledby="dress-title">
       <div className="section-kicker">Дресс-код</div>
       <h2 id="dress-title">Цветовая палитра дресс-код нашей свадьбы</h2>
+      <p className="dress-code-lead body-copy">
+        Но мы будем рады, если в своих нарядах Вы поддержите цветовую гамму нашей свадьбы.
+      </p>
       <div className="dress-code-reference">
         <div className="dress-code-divider" aria-hidden="true" />
 
@@ -20,6 +23,10 @@ export function DressCode() {
               <figcaption>{color.label}</figcaption>
             </figure>
           ))}
+        </div>
+
+        <div className="dress-code-note prose">
+          <p className="body-copy">Для нас главное — Ваше присутствие!</p>
         </div>
       </div>
     </section>

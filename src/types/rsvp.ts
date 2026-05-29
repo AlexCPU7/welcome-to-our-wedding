@@ -9,10 +9,10 @@ export const rsvpDrinkOptions = [
   { value: 'no_alcohol', label: 'Не буду пить алкоголь', payloadKey: 'drink_no_alcohol' },
 ] as const;
 
-export const noAlcoholDrinkOptions = ['no_alcohol', 'will_not_drink_alcohol'] as const;
+export const noAlcoholDrinkOptions = ['no_alcohol'] as const;
 
 export type ActiveDrinkOption = (typeof rsvpDrinkOptions)[number]['value'];
-export type LegacyDrinkOption = 'beer' | 'whiskey';
+export type LegacyDrinkOption = 'beer' | 'whiskey' | 'will_not_drink_alcohol';
 export type DrinkOption = ActiveDrinkOption | LegacyDrinkOption;
 
 export type RsvpAnswers = {
