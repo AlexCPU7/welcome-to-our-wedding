@@ -329,7 +329,7 @@ html[data-design='limoncello'] #invitation-title {
 
 html[data-design='limoncello'] .invitation-prose .body-copy {
   max-width: 720px;
-  margin: 0;
+    margin: 0px 0px 15px 0px;
 }
 
 html[data-design='limoncello'] .invitation-prose p + p {

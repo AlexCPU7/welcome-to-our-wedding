@@ -49,6 +49,7 @@ export function Locations() {
       <div className="section-kicker">Локации</div>
       <h2 id="locations-title">Где встречаемся</h2>
       <div className="locations-grid">
+        <p>При желании и возможности будем рады видеть вас на нашей свадебной регистрации</p>
         <LocationCard location={wedding.ceremony} />
         <LocationCard location={wedding.banquet} />
       </div>

@@ -166,7 +166,7 @@ function CalendarRoute() {
         lineNumber: 52,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ jsxDEV("p", { children: "Начало свадебной церемонии" }, void 0, false, {
+      /* @__PURE__ */ jsxDEV("p", { children: "Начало регистрации" }, void 0, false, {
         fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
         lineNumber: 53,
         columnNumber: 9

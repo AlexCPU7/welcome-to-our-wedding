@@ -4,9 +4,9 @@ export function DressCode() {
   return (
     <section className="content-section section-reveal" aria-labelledby="dress-title">
       <div className="section-kicker">Дресс-код</div>
-      <h2 id="dress-title">Цветовая палитра дресс-код нашей свадьбы</h2>
+      <h2 id="dress-title">Дресс-код</h2>
       <p className="dress-code-lead body-copy">
-        Но мы будем рады, если в своих нарядах Вы поддержите цветовую гамму нашей свадьбы.
+        Чтобы сохранить стиль и атмосферу мероприятия, мы будем рады, если вы поддержите цветовую гамму нашей свадьбы
       </p>
       <div className="dress-code-reference">
         <div className="dress-code-divider" aria-hidden="true" />
