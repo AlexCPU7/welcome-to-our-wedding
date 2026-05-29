@@ -4,6 +4,17 @@ const STORAGE_PREFIX = 'alexey-marina-wedding:rsvp';
 
 const makeStorageKey = (guestUuid: string) => `${STORAGE_PREFIX}:${guestUuid}`;
 
+type SaveRsvpOptions = {
+  pendingSync?: boolean;
+  lastSyncedAt?: string;
+  revision?: number;
+  updatedAt?: string;
+};
+
+function normalizeStoredRevision(value: unknown) {
+  return typeof value === 'number' && Number.isFinite(value) && value >= 0 ? value : 0;
+}
+
 export function loadStoredRsvp(guestUuid: string): StoredRsvp | null {
   try {
     const rawValue = window.localStorage.getItem(makeStorageKey(guestUuid));
@@ -19,9 +30,11 @@ export function loadStoredRsvp(guestUuid: string): StoredRsvp | null {
       answers: {
         ...defaultRsvpAnswers,
         ...parsed.answers,
+        drinks: Array.isArray(parsed.answers?.drinks) ? parsed.answers.drinks : [],
       },
       pendingSync: Boolean(parsed.pendingSync),
       updatedAt: parsed.updatedAt ?? new Date().toISOString(),
+      revision: normalizeStoredRevision(parsed.revision),
       lastSyncedAt: parsed.lastSyncedAt,
     };
   } catch {
@@ -36,14 +49,16 @@ export function loadRsvpAnswers(guestUuid: string): RsvpAnswers {
 export function saveRsvpLocally(
   guestUuid: string,
   answers: RsvpAnswers,
-  options?: { pendingSync?: boolean; lastSyncedAt?: string },
+  options?: SaveRsvpOptions,
 ) {
   const previous = loadStoredRsvp(guestUuid);
+  const revision = options?.revision ?? (previous?.revision ?? 0) + 1;
   const storedValue: StoredRsvp = {
     guestUuid,
     answers,
     pendingSync: options?.pendingSync ?? previous?.pendingSync ?? true,
-    updatedAt: new Date().toISOString(),
+    updatedAt: options?.updatedAt ?? new Date().toISOString(),
+    revision,
     lastSyncedAt: options?.lastSyncedAt ?? previous?.lastSyncedAt,
   };
 
@@ -51,9 +66,22 @@ export function saveRsvpLocally(
   return storedValue;
 }
 
-export function markRsvpSynced(guestUuid: string, answers: RsvpAnswers) {
+export function markRsvpSynced(
+  guestUuid: string,
+  answers: RsvpAnswers,
+  revision: number,
+  updatedAt: string,
+) {
+  const current = loadStoredRsvp(guestUuid);
+
+  if (!current || current.revision !== revision) {
+    return current;
+  }
+
   return saveRsvpLocally(guestUuid, answers, {
     pendingSync: false,
     lastSyncedAt: new Date().toISOString(),
+    revision,
+    updatedAt,
   });
 }

@@ -18,7 +18,7 @@ const drinkOptions = [
   { value: "red_wine", label: "Красное вино" },
   { value: "vodka", label: "Водка" },
   { value: "cognac", label: "Коньяк" },
-  { value: "no_alcohol", label: "Не пью алкоголь" }
+  { value: "no_alcohol", label: "Не буду пить алкоголь" }
 ];
 function statusText(state) {
   switch (state) {
@@ -274,7 +274,7 @@ export function RsvpForm({ guest }) {
           lineNumber: 245,
           columnNumber: 11
         }, this),
-        /* @__PURE__ */ jsxDEV("p", { className: "question-card__hint", children: "Можно выбрать несколько вариантов. «Не пью алкоголь» отменяет остальные варианты." }, void 0, false, {
+        /* @__PURE__ */ jsxDEV("p", { className: "question-card__hint", children: "Можно выбрать несколько вариантов. «Не буду пить алкоголь» отменяет остальные варианты." }, void 0, false, {
           fileName: "D:/code/site-welcome/src/components/RsvpForm.tsx",
           lineNumber: 246,
           columnNumber: 11

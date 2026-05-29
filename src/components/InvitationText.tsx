@@ -1,5 +1,3 @@
-import { wedding } from '../data/wedding';
-
 export function InvitationText() {
   return (
     <section className="content-section section-reveal" aria-labelledby="invitation-title">
@@ -37,28 +35,18 @@ export function InvitationText() {
           «Царицыно» к 14:00.
         </p>
       </div>
-      <div className="pearl-polaroids" aria-label="?????????? ???? ??????????">
+      <div className="pearl-polaroids" aria-label="Места для будущих фотографий пары">
         <figure className="pearl-polaroid pearl-polaroid--left">
-          <img
-            src={wedding.ceremony.photo}
-            alt={wedding.ceremony.photoAlt}
-            loading="lazy"
-            onError={(event) => {
-              event.currentTarget.src = wedding.ceremony.photoFallback;
-            }}
-          />
-          <figcaption>{wedding.ceremony.time}</figcaption>
+          <div className="pearl-polaroid__placeholder" aria-hidden="true">
+            <span>Фото пары</span>
+          </div>
+          <figcaption>ждём вас</figcaption>
         </figure>
         <figure className="pearl-polaroid pearl-polaroid--right">
-          <img
-            src={wedding.banquet.photo}
-            alt={wedding.banquet.photoAlt}
-            loading="lazy"
-            onError={(event) => {
-              event.currentTarget.src = wedding.banquet.photoFallback;
-            }}
-          />
-          <figcaption>{wedding.banquet.time}</figcaption>
+          <div className="pearl-polaroid__placeholder" aria-hidden="true">
+            <span>Фото момента</span>
+          </div>
+          <figcaption>25.06</figcaption>
         </figure>
       </div>
     </section>

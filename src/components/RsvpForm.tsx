@@ -1,9 +1,16 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { RSVP_ENDPOINT } from '../data/wedding';
 import type { GuestIdentity } from '../services/guest';
-import { submitRsvp } from '../services/rsvpApi';
+import { sendRsvpBeacon, submitRsvp } from '../services/rsvpApi';
 import { loadRsvpAnswers, loadStoredRsvp, markRsvpSynced, saveRsvpLocally } from '../services/storage';
-import type { DrinkOption, RsvpAnswers, YesNo } from '../types/rsvp';
+import {
+  noAlcoholDrinkOptions,
+  rsvpDrinkOptions,
+  type DrinkOption,
+  type RsvpAnswers,
+  type StoredRsvp,
+  type YesNo,
+} from '../types/rsvp';
 
 type RsvpFormProps = {
   guest: GuestIdentity;
@@ -19,15 +26,6 @@ const yesNoOptions: Array<{ value: YesNo; label: string }> = [
 const attendanceOptions: Array<{ value: YesNo; label: string }> = [
   { value: 'yes', label: 'Да, буду' },
   { value: 'no', label: 'К сожалению, не смогу' },
-];
-
-const drinkOptions: Array<{ value: DrinkOption; label: string }> = [
-  { value: 'champagne', label: 'Шампанское' },
-  { value: 'white_wine', label: 'Белое вино' },
-  { value: 'red_wine', label: 'Красное вино' },
-  { value: 'vodka', label: 'Водка' },
-  { value: 'cognac', label: 'Коньяк' },
-  { value: 'no_alcohol', label: 'Не пью алкоголь' },
 ];
 
 function statusText(state: SaveState) {
@@ -51,9 +49,17 @@ export function RsvpForm({ guest }: RsvpFormProps) {
   const [lastError, setLastError] = useState('');
   const isFirstRenderRef = useRef(true);
   const syncTimerRef = useRef<number | null>(null);
+  const retryTimerRef = useRef<number | null>(null);
   const statusHideTimerRef = useRef<number | null>(null);
 
   const canSyncToExternalService = Boolean(RSVP_ENDPOINT);
+
+  const clearRetryTimer = useCallback(() => {
+    if (retryTimerRef.current) {
+      window.clearTimeout(retryTimerRef.current);
+      retryTimerRef.current = null;
+    }
+  }, []);
 
   const showTemporaryStatus = useCallback((state: SaveState) => {
     setSaveState(state);
@@ -69,10 +75,16 @@ export function RsvpForm({ guest }: RsvpFormProps) {
     }
   }, []);
 
-  const syncAnswers = useCallback(
-    async (nextAnswers: RsvpAnswers) => {
+  const syncStoredAnswers = useCallback(
+    async (stored: StoredRsvp, attempt = 0) => {
       if (!canSyncToExternalService) {
         showTemporaryStatus('local-only');
+        return;
+      }
+
+      const current = loadStoredRsvp(guest.uuid);
+
+      if (!current || current.revision !== stored.revision) {
         return;
       }
 
@@ -81,12 +93,19 @@ export function RsvpForm({ guest }: RsvpFormProps) {
 
       const result = await submitRsvp({
         guestUuid: guest.uuid,
-        answers: nextAnswers,
+        answers: stored.answers,
+        updatedAt: stored.updatedAt,
+        revision: stored.revision,
       });
 
       if (result.status === 'success') {
-        markRsvpSynced(guest.uuid, nextAnswers);
-        showTemporaryStatus('saved');
+        const synced = markRsvpSynced(guest.uuid, stored.answers, stored.revision, stored.updatedAt);
+
+        if (synced?.revision === stored.revision && !synced.pendingSync) {
+          clearRetryTimer();
+          showTemporaryStatus('saved');
+        }
+
         return;
       }
 
@@ -97,17 +116,30 @@ export function RsvpForm({ guest }: RsvpFormProps) {
 
       setLastError(result.message);
       showTemporaryStatus('error');
+
+      const latest = loadStoredRsvp(guest.uuid);
+
+      if (latest?.revision === stored.revision && latest.pendingSync) {
+        clearRetryTimer();
+
+        const delayMs = Math.min(120000, 2500 * 2 ** Math.min(attempt, 5));
+        const jitterMs = Math.round(Math.random() * 900);
+
+        retryTimerRef.current = window.setTimeout(() => {
+          void syncStoredAnswers(stored, attempt + 1);
+        }, delayMs + jitterMs);
+      }
     },
-    [canSyncToExternalService, guest.uuid, showTemporaryStatus],
+    [canSyncToExternalService, clearRetryTimer, guest.uuid, showTemporaryStatus],
   );
 
   useEffect(() => {
     const stored = loadStoredRsvp(guest.uuid);
 
     if (stored?.pendingSync && canSyncToExternalService) {
-      void syncAnswers(stored.answers);
+      void syncStoredAnswers(stored);
     }
-  }, [canSyncToExternalService, guest.uuid, syncAnswers]);
+  }, [canSyncToExternalService, guest.uuid, syncStoredAnswers]);
 
   useEffect(() => {
     if (isFirstRenderRef.current) {
@@ -115,7 +147,7 @@ export function RsvpForm({ guest }: RsvpFormProps) {
       return;
     }
 
-    saveRsvpLocally(guest.uuid, answers, {
+    const stored = saveRsvpLocally(guest.uuid, answers, {
       pendingSync: canSyncToExternalService,
     });
 
@@ -129,8 +161,10 @@ export function RsvpForm({ guest }: RsvpFormProps) {
       window.clearTimeout(syncTimerRef.current);
     }
 
+    clearRetryTimer();
+
     syncTimerRef.current = window.setTimeout(() => {
-      void syncAnswers(answers);
+      void syncStoredAnswers(stored);
     }, 650);
 
     return () => {
@@ -138,28 +172,70 @@ export function RsvpForm({ guest }: RsvpFormProps) {
         window.clearTimeout(syncTimerRef.current);
       }
     };
-  }, [answers, canSyncToExternalService, guest.uuid, showTemporaryStatus, syncAnswers]);
+  }, [
+    answers,
+    canSyncToExternalService,
+    clearRetryTimer,
+    guest.uuid,
+    showTemporaryStatus,
+    syncStoredAnswers,
+  ]);
 
   useEffect(() => {
     return () => {
       if (statusHideTimerRef.current) {
         window.clearTimeout(statusHideTimerRef.current);
       }
+
+      clearRetryTimer();
     };
-  }, []);
+  }, [clearRetryTimer]);
 
   useEffect(() => {
     const handleOnline = () => {
       const stored = loadStoredRsvp(guest.uuid);
 
       if (stored?.pendingSync) {
-        void syncAnswers(stored.answers);
+        void syncStoredAnswers(stored);
       }
     };
 
     window.addEventListener('online', handleOnline);
     return () => window.removeEventListener('online', handleOnline);
-  }, [guest.uuid, syncAnswers]);
+  }, [guest.uuid, syncStoredAnswers]);
+
+  useEffect(() => {
+    const flushPendingAnswer = () => {
+      if (!canSyncToExternalService) {
+        return;
+      }
+
+      const stored = loadStoredRsvp(guest.uuid);
+
+      if (stored?.pendingSync) {
+        sendRsvpBeacon({
+          guestUuid: guest.uuid,
+          answers: stored.answers,
+          updatedAt: stored.updatedAt,
+          revision: stored.revision,
+        });
+      }
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'hidden') {
+        flushPendingAnswer();
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('pagehide', flushPendingAnswer);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('pagehide', flushPendingAnswer);
+    };
+  }, [canSyncToExternalService, guest.uuid]);
 
   const updateAnswer = <Key extends keyof RsvpAnswers>(key: Key, value: RsvpAnswers[Key]) => {
     setAnswers((current) => ({
@@ -170,14 +246,16 @@ export function RsvpForm({ guest }: RsvpFormProps) {
 
   const toggleDrink = (drink: DrinkOption) => {
     setAnswers((current) => {
-      if (drink === 'no_alcohol') {
+      if (noAlcoholDrinkOptions.includes(drink as (typeof noAlcoholDrinkOptions)[number])) {
         return {
           ...current,
-          drinks: current.drinks.includes('no_alcohol') ? [] : ['no_alcohol'],
+          drinks: current.drinks.includes(drink) ? [] : [drink],
         };
       }
 
-      const withoutNoAlcohol = current.drinks.filter((item) => item !== 'no_alcohol');
+      const withoutNoAlcohol = current.drinks.filter(
+        (item) => !noAlcoholDrinkOptions.includes(item as (typeof noAlcoholDrinkOptions)[number]),
+      );
       const alreadySelected = withoutNoAlcohol.includes(drink);
 
       return {
@@ -244,10 +322,10 @@ export function RsvpForm({ guest }: RsvpFormProps) {
         <fieldset className="question-card">
           <legend>Какие напитки вы предпочитаете?</legend>
           <p className="question-card__hint">
-            Можно выбрать несколько вариантов. «Не пью алкоголь» отменяет остальные варианты.
+            Можно выбрать несколько вариантов. Варианты без алкоголя отменяют алкогольные напитки.
           </p>
           <div className="option-grid option-grid--drinks">
-            {drinkOptions.map((option) => (
+            {rsvpDrinkOptions.map((option) => (
               <label className="choice-pill" key={option.value}>
                 <input
                   type="checkbox"
