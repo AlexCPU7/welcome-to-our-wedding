@@ -5,7 +5,13 @@ const calendarMonth = new Intl.DateTimeFormat('ru-RU', { month: 'long' }).format
 const calendarYear = calendarDate.getFullYear();
 const calendarDay = calendarDate.getDate();
 const calendarDaysInMonth = new Date(calendarYear, calendarDate.getMonth() + 1, 0).getDate();
+const calendarStartOffset = (new Date(calendarYear, calendarDate.getMonth(), 1).getDay() + 6) % 7;
 const calendarDays = Array.from({ length: calendarDaysInMonth }, (_, index) => index + 1);
+const calendarCells = [
+  ...Array.from({ length: calendarStartOffset }, () => null),
+  ...calendarDays,
+];
+const calendarWeekdays = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
 
 function WeddingCalendar() {
   return (
@@ -14,8 +20,16 @@ function WeddingCalendar() {
         <span>{calendarMonth}</span>
         <span>{calendarYear}</span>
       </div>
+      <div className="sketch-calendar__weekdays" aria-hidden="true">
+        {calendarWeekdays.map((weekday) => (
+          <span key={weekday}>{weekday}</span>
+        ))}
+      </div>
       <div className="sketch-calendar__dates">
-        {calendarDays.map((day) =>
+        {calendarCells.map((day, index) =>
+          day === null ? (
+            <span className="sketch-calendar__blank" aria-hidden="true" key={`blank-${index}`} />
+          ) :
           day === calendarDay ? (
             <strong key={day}>
               <svg className="sketch-calendar__heart" viewBox="0 0 150 112" aria-hidden="true">
@@ -36,10 +50,10 @@ export function InvitationText() {
   return (
     <section className="content-section section-reveal" aria-labelledby="invitation-title">
       <div className="section-kicker">Приглашение</div>
-      <h2 id="invitation-title">Дорогие гости!</h2>
+      <h2 id="invitation-title">ДОРОГИЕ РОДНЫЕ И БЛИЗКИЕ!</h2>
       <div className="prose centered invitation-prose">
         <p className="body-copy">
-          Сердца переполняются радостью, и мы хотим, что бы вы стали частью нашего общего дня! Приглашаем вас на нашу свадьбу!
+          В нашей жизни предстоят счастливые перемены! Мы приглашаем вас разделить с нами радостный день, в котором мы станем семьей!
         </p>
         <p className="body-copy">
           Основной сбор гостей состоится в ресторане Lauren Parker в 16:30. Для тех, кто хочет

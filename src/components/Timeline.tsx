@@ -6,7 +6,7 @@ export function Timeline() {
   return (
     <section className="content-section section-reveal" aria-labelledby="timeline-title">
       <div className="section-kicker">План дня</div>
-      <h2 id="timeline-title">Тайминг</h2>
+      <h2 id="timeline-title">Тайминг дня</h2>
       <div className="timeline" role="list">
         {events.map((event) => (
           <article className="timeline-card" role="listitem" key={event.time}>

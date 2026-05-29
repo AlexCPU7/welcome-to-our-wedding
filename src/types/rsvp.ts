@@ -6,7 +6,7 @@ export const rsvpDrinkOptions = [
   { value: 'white_wine', label: 'Белое вино', payloadKey: 'drink_white_wine' },
   { value: 'red_wine', label: 'Красное вино', payloadKey: 'drink_red_wine' },
   { value: 'champagne', label: 'Шампанское', payloadKey: 'drink_champagne' },
-  { value: 'no_alcohol', label: 'Не буду пить алкоголь', payloadKey: 'drink_no_alcohol' },
+  { value: 'no_alcohol', label: 'Не пью алкоголь', payloadKey: 'drink_no_alcohol' },
 ] as const;
 
 export const noAlcoholDrinkOptions = ['no_alcohol'] as const;

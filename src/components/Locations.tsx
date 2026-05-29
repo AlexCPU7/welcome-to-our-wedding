@@ -1,12 +1,15 @@
 import { wedding } from '../data/wedding';
 
-type Location = typeof wedding.ceremony;
+type Location = typeof wedding.ceremony | typeof wedding.banquet;
 
 function LocationCard({ location }: { location: Location }) {
+  const italyPhoto = 'italyPhoto' in location ? location.italyPhoto : undefined;
+
   return (
     <article className="location-card">
-      <figure className="location-card__photo">
+      <figure className={`location-card__photo${italyPhoto ? ' location-card__photo--has-italy' : ''}`}>
         <img
+          className="location-card__image location-card__image--default"
           src={location.photo}
           alt={location.photoAlt}
           loading="lazy"
@@ -21,6 +24,24 @@ function LocationCard({ location }: { location: Location }) {
             image.src = location.photoFallback;
           }}
         />
+        {italyPhoto ? (
+          <img
+            className="location-card__image location-card__image--italy"
+            src={italyPhoto}
+            alt={location.photoAlt}
+            loading="lazy"
+            onError={(event) => {
+              const image = event.currentTarget;
+
+              if (image.dataset.fallbackApplied === 'true') {
+                return;
+              }
+
+              image.dataset.fallbackApplied = 'true';
+              image.src = location.photoFallback;
+            }}
+          />
+        ) : null}
         <figcaption>{location.time}</figcaption>
       </figure>
       <div className="location-card__body">
