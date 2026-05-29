@@ -1,4 +1,4 @@
-export type DesignVariantId = 'pearl';
+export type DesignVariantId = 'pearl' | 'limoncello';
 
 export type DesignVariant = {
   id: DesignVariantId;
@@ -13,6 +13,12 @@ export const designVariants: DesignVariant[] = [
     label: 'Pearl editorial',
     shortLabel: 'Pearl',
     description: 'Светлый вытянутый макет с жемчужинами, тонкой типографикой и polaroid-фотографиями.',
+  },
+  {
+    id: 'limoncello',
+    label: 'Limoncello Italy',
+    shortLabel: 'Italy',
+    description: 'Кремовый итальянский макет с акварельными лимонами, синей типографикой и рукописными акцентами.',
   },
 ];
 
