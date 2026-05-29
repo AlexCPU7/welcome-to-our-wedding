@@ -418,10 +418,11 @@ a {
 
 .save-status {
   position: fixed;
-  right: 18px;
-  top: 18px;
+  top: calc(18px + env(safe-area-inset-top, 0px));
+  right: calc(18px + env(safe-area-inset-right, 0px));
   bottom: auto;
-  z-index: 60;
+  left: auto;
+  z-index: 1000;
   display: inline-flex;
   align-items: center;
   gap: 9px;
@@ -438,6 +439,7 @@ a {
   white-space: normal;
   backdrop-filter: blur(16px);
   animation: toast-in 220ms ease both;
+  pointer-events: none;
 }
 
 .save-status span {
@@ -812,11 +814,14 @@ textarea:focus {
   }
 
   .save-status {
-    right: 10px;
-    top: 10px;
+    right: calc(10px + env(safe-area-inset-right, 0px));
+    top: calc(10px + env(safe-area-inset-top, 0px));
     bottom: auto;
-    left: 10px;
-    max-width: none;
+    left: auto;
+    width: fit-content;
+    max-width: calc(100vw - 20px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
+    justify-content: flex-start;
+    text-align: left;
   }
 }
 
@@ -1465,8 +1470,8 @@ html[data-design='pearl'] .rsvp-dev-note {
 }
 
 html[data-design='pearl'] .save-status {
-  top: 16px;
-  right: 16px;
+  top: calc(16px + env(safe-area-inset-top, 0px));
+  right: calc(16px + env(safe-area-inset-right, 0px));
   border: 0;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.92);
@@ -1506,9 +1511,9 @@ html[data-design='pearl'] .footer strong {
   html[data-design='pearl'] .content-section {
     padding: 52px 0;
   }
-html[data-design='pearl'] .save-status {
-    right: 10px;
-    left: 10px;
+  html[data-design='pearl'] .save-status {
+    right: calc(10px + env(safe-area-inset-right, 0px));
+    left: auto;
   }
 }
 

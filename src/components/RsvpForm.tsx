@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { RSVP_ENDPOINT } from '../data/wedding';
 import type { GuestIdentity } from '../services/guest';
 import { loadRsvpFromServer, sendRsvpBeacon, submitRsvp } from '../services/rsvpApi';
@@ -18,6 +19,12 @@ type RsvpFormProps = {
 
 type SaveState = 'idle' | 'saving' | 'saved' | 'local-only' | 'error';
 type RemoteLoadState = 'loading' | 'ready' | 'error';
+
+const SAVE_STATUS_HIDE_DELAY_MS: Partial<Record<SaveState, number>> = {
+  saved: 2000,
+  'local-only': 2000,
+  error: 6000,
+};
 
 const yesNoOptions: Array<{ value: YesNo; label: string }> = [
   { value: 'yes', label: 'Да' },
@@ -42,6 +49,16 @@ function statusText(state: SaveState) {
     default:
       return 'Заполните ответы — они сохранятся автоматически';
   }
+}
+
+function SaveStatusToast({ className, state }: { className: string; state: SaveState }) {
+  return createPortal(
+    <div className={className} role="alert" aria-live="assertive">
+      <span aria-hidden="true" />
+      {statusText(state)}
+    </div>,
+    document.body,
+  );
 }
 
 export function RsvpForm({ guest }: RsvpFormProps) {
@@ -74,10 +91,12 @@ export function RsvpForm({ guest }: RsvpFormProps) {
       window.clearTimeout(statusHideTimerRef.current);
     }
 
-    if (state === 'saved' || state === 'local-only' || state === 'error') {
+    const hideDelayMs = SAVE_STATUS_HIDE_DELAY_MS[state];
+
+    if (hideDelayMs) {
       statusHideTimerRef.current = window.setTimeout(() => {
         setSaveState('idle');
-      }, 6000);
+      }, hideDelayMs);
     }
   }, []);
 
@@ -509,12 +528,7 @@ export function RsvpForm({ guest }: RsvpFormProps) {
         </p>
       ) : null}
 
-      {saveState !== 'idle' ? (
-        <div className={statusClassName} role="alert" aria-live="assertive">
-          <span aria-hidden="true" />
-          {statusText(saveState)}
-        </div>
-      ) : null}
+      {saveState !== 'idle' ? <SaveStatusToast className={statusClassName} state={saveState} /> : null}
     </section>
   );
 }
