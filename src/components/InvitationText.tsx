@@ -12,6 +12,7 @@ const calendarCells = [
   ...calendarDays,
 ];
 const calendarWeekdays = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+const couplePhoto = `${import.meta.env.BASE_URL}images/couple-mountains.webp`;
 
 function WeddingCalendar() {
   return (
@@ -58,6 +59,9 @@ export function InvitationText() {
         <p className="body-copy">
           Мы приглашаем вас разделить с нами радостный день, в котором мы станем семьей! Нам будет очень ценно провести его рядом с вами и сохранить эти тёплые воспоминания вместе 💙
         </p>
+        <figure className="invitation-couple-photo">
+          <img src={couplePhoto} alt="Алексей и Марина на фоне гор" loading="lazy" decoding="async" />
+        </figure>
         <p className="body-copy">
           Основной сбор гостей состоится в ресторане Lauren Parker в 16:30. Для тех, кто хочет
           присутствовать на свадебной церемонии, мы будем ждать вас в Оперном доме музея-заповедника

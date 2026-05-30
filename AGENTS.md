@@ -159,6 +159,7 @@
 Важные ассеты:
 
 - `public/images/LaurenParker.webp` — фото ресторана для Italy locations.
+- `public/images/couple-mountains.webp` — фото пары в блоке приглашения между вторым и третьим абзацем.
 - `public/images/IMG_0374-transparent.png` — нижняя картинка с корзиной/лимонами/цветами.
 - `IMG_0374.JPG` — исходник для нижней картинки.
 - `public/images/limoncello-bottom-branch.png` — угловые картинки тайминга.
