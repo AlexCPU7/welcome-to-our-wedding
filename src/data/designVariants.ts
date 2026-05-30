@@ -22,7 +22,7 @@ export const designVariants: DesignVariant[] = [
   },
 ];
 
-export const defaultDesignVariant: DesignVariantId = 'pearl';
+export const defaultDesignVariant: DesignVariantId = 'limoncello';
 
 export function isDesignVariant(value: string | null): value is DesignVariantId {
   return designVariants.some((variant) => variant.id === value);

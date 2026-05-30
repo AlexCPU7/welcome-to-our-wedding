@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import { DesignSwitcher } from './components/DesignSwitcher';
+import { useEffect } from 'react';
 import { DressCode } from './components/DressCode';
 import { Footer } from './components/Footer';
 import { Hero } from './components/Hero';
@@ -9,45 +8,28 @@ import { PearlCountdownBlock, PearlDateBlock } from './components/PearlDateBlock
 import { RsvpForm } from './components/RsvpForm';
 import { Timeline } from './components/Timeline';
 import { Wishes } from './components/Wishes';
-import { defaultDesignVariant, isDesignVariant, type DesignVariantId } from './data/designVariants';
+import { defaultDesignVariant } from './data/designVariants';
 import { getGuestUuid } from './services/guest';
-
-const DESIGN_STORAGE_KEY = 'alexey-marina-wedding:design-variant';
-
-function getInitialDesignVariant(): DesignVariantId {
-  const params = new URLSearchParams(window.location.search);
-  const designFromUrl = params.get('design');
-
-  if (isDesignVariant(designFromUrl)) {
-    window.localStorage.setItem(DESIGN_STORAGE_KEY, designFromUrl);
-    return designFromUrl;
-  }
-
-  const savedDesign = window.localStorage.getItem(DESIGN_STORAGE_KEY);
-
-  if (isDesignVariant(savedDesign)) {
-    return savedDesign;
-  }
-
-  return defaultDesignVariant;
-}
 
 function App() {
   const guest = getGuestUuid();
-  const [design, setDesign] = useState<DesignVariantId>(getInitialDesignVariant);
+  const design = defaultDesignVariant;
 
   useEffect(() => {
     document.documentElement.dataset.design = design;
-    window.localStorage.setItem(DESIGN_STORAGE_KEY, design);
 
     const url = new URL(window.location.href);
-    url.searchParams.set('design', design);
-    window.history.replaceState({}, '', url);
+
+    if (url.searchParams.has('design')) {
+      url.searchParams.delete('design');
+      window.history.replaceState({}, '', url);
+    }
   }, [design]);
 
   return (
     <>
-      <DesignSwitcher selected={design} onSelect={setDesign} />
+      {/* DesignSwitcher is intentionally disabled: Italy is now the primary public design. */}
+      {/* <DesignSwitcher selected={design} onSelect={setDesign} /> */}
       <main className="page-shell" data-design={design}>
         <Hero />
         <PearlDateBlock />
