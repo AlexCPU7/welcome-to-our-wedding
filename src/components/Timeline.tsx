@@ -8,6 +8,16 @@ export function Timeline() {
       <div className="section-kicker">План дня</div>
       <h2 id="timeline-title">Тайминг дня</h2>
       <div className="timeline" role="list">
+        <span
+          className="timeline__corner-art timeline__corner-art--top-left"
+          aria-hidden="true"
+          role="presentation"
+        />
+        <span
+          className="timeline__corner-art timeline__corner-art--bottom-right"
+          aria-hidden="true"
+          role="presentation"
+        />
         {events.map((event) => (
           <article className="timeline-card" role="listitem" key={event.time}>
             <div className="timeline-card__time">{event.time}</div>

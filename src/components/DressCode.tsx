@@ -6,7 +6,10 @@ export function DressCode() {
       <div className="section-kicker">Дресс-код</div>
       <h2 id="dress-title">Дресс-код</h2>
       <p className="dress-code-lead body-copy">
-        Чтобы сохранить стиль и атмосферу мероприятия, мы будем рады, если вы поддержите цветовую гамму нашей свадьбы
+        Мы ждем и с удовольствием готовимся к нашему незабываемому дню!
+      </p>
+      <p className="dress-code-lead body-copy">
+      Поддержите нас вашими улыбками и объятиями, а так же красивыми нарядами в палитре торжества:
       </p>
       <div className="dress-code-reference">
         <div className="dress-code-divider" aria-hidden="true" />

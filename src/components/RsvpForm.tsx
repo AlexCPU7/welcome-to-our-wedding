@@ -438,7 +438,7 @@ export function RsvpForm({ guest }: RsvpFormProps) {
 
       <form className="rsvp-form" aria-busy={remoteLoadState === 'loading'} aria-disabled={isFormDisabled}>
         <fieldset className="question-card">
-          <legend>Подтвердите, пожалуйста, своё присутствие на свадьбе</legend>
+          <legend>Подтвердите, пожалуйста, своё присутствие на свадьбе до 5 июня</legend>
           <div className="option-grid option-grid--two">
             {attendanceOptions.map((option) => (
               <label className="choice-pill" key={option.value}>

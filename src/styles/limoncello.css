@@ -1014,14 +1014,16 @@ html[data-design='limoncello'] .footer {
 
 html[data-design='limoncello'] .footer::after {
   position: absolute;
-  right: 50%;
+  right: auto;
+  left: 50%;
   bottom: 8px;
+  margin-left: -12px;
   width: min(360px, 64vw);
   height: 330px;
   background: url('/images/limoncello-bucket.png') center bottom / contain no-repeat;
   content: '';
   pointer-events: none;
-  transform: translateX(50%);
+  transform: translateX(-50%);
 }
 
 html[data-design='limoncello'] .footer p {
@@ -1803,7 +1805,7 @@ html[data-design='limoncello'] .footer::after {
   bottom: 0;
   width: min(390px, 72vw);
   height: 332px;
-  background-image: url('/images/IMG_0372-transparent.png');
+  background-image: url('/images/IMG_0374-transparent.png');
   background-position: center bottom;
   background-size: contain;
   filter: saturate(0.98) contrast(0.98);
@@ -3059,5 +3061,114 @@ html[data-design='limoncello'] .question-card::after {
 
   html[data-design='limoncello'] .palette__item figcaption {
     font-size: 0.51rem;
+  }
+}
+
+/* Italy timing final lock: corner art and frame are anchored to the same box,
+   so the composition scales as one unit across viewport widths. */
+
+html[data-design='limoncello'] .content-section[aria-labelledby='timeline-title']::before,
+html[data-design='limoncello'] .content-section[aria-labelledby='timeline-title']::after {
+  display: none;
+  content: none;
+}
+
+html[data-design='limoncello'] .timeline {
+  --timing-corner-w: clamp(230px, 22vw, 330px);
+  --timing-corner-h: calc(var(--timing-corner-w) * 0.737);
+  --timing-tl-corner-w: calc(var(--timing-corner-w) * 0.92);
+  --timing-tl-corner-h: calc(var(--timing-tl-corner-w) * 0.737);
+  --timing-tl-left: calc(var(--timing-tl-corner-w) * -0.16);
+  --timing-tl-top: calc(var(--timing-tl-corner-h) * -0.52);
+  --timing-br-right: calc(var(--timing-corner-w) * -0.14);
+  --timing-br-bottom: calc(var(--timing-corner-h) * -0.16);
+  --timing-frame-top-offset: -24px;
+  --timing-tl-horizontal-gap: 30px;
+  --timing-br-horizontal-gap: 30px;
+  --timing-tl-vertical-gap: 20px;
+  --timing-br-vertical-gap: 20px;
+  --timing-tl-clear-x: calc(
+    var(--timing-tl-corner-w) + var(--timing-tl-left) + var(--timing-tl-horizontal-gap)
+  );
+  --timing-tl-clear-y: calc(
+    var(--timing-tl-corner-h) + var(--timing-tl-top) + var(--timing-tl-vertical-gap) -
+      var(--timing-frame-top-offset)
+  );
+  --timing-br-clear-x: calc(var(--timing-corner-w) + var(--timing-br-right) + var(--timing-br-horizontal-gap));
+  --timing-br-clear-y: calc(var(--timing-corner-h) + var(--timing-br-bottom) + var(--timing-br-vertical-gap));
+}
+
+html[data-design='limoncello'] .timeline::before {
+  inset: var(--timing-frame-top-offset) 0 0;
+  z-index: 0;
+  background:
+    linear-gradient(var(--italy-blue-line), var(--italy-blue-line)) top right / calc(100% - var(--timing-tl-clear-x)) 1px no-repeat,
+    linear-gradient(var(--italy-blue-line), var(--italy-blue-line)) right top / 1px calc(100% - var(--timing-br-clear-y)) no-repeat,
+    linear-gradient(var(--italy-blue-line), var(--italy-blue-line)) bottom left / calc(100% - var(--timing-br-clear-x)) 1px no-repeat,
+    linear-gradient(var(--italy-blue-line), var(--italy-blue-line)) left bottom / 1px calc(100% - var(--timing-tl-clear-y)) no-repeat;
+}
+
+html[data-design='limoncello'] .timeline__corner-art {
+  position: absolute;
+  z-index: 0;
+  display: block;
+  width: var(--timing-corner-w);
+  height: var(--timing-corner-h);
+  background-image: url('/images/limoncello-bottom-branch.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+}
+
+html[data-design='limoncello'] .timeline__corner-art--top-left {
+  top: var(--timing-tl-top);
+  left: var(--timing-tl-left);
+  width: var(--timing-tl-corner-w);
+  height: var(--timing-tl-corner-h);
+  transform: rotate(180deg);
+}
+
+html[data-design='limoncello'] .timeline__corner-art--bottom-right {
+  right: var(--timing-br-right);
+  bottom: var(--timing-br-bottom);
+  transform: rotate(2deg);
+}
+
+html[data-design='limoncello'] .timeline-card {
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  html[data-design='limoncello'] .timeline {
+    --timing-corner-w: min(230px, 42vw);
+    --timing-corner-h: calc(var(--timing-corner-w) * 0.737);
+    --timing-tl-corner-w: var(--timing-corner-w);
+    --timing-tl-corner-h: var(--timing-corner-h);
+    --timing-tl-left: calc(var(--timing-tl-corner-w) * -0.16);
+    --timing-tl-top: calc(var(--timing-tl-corner-h) * -0.34);
+    --timing-br-right: calc(var(--timing-corner-w) * -0.14);
+    --timing-br-bottom: calc(var(--timing-corner-h) * -0.16);
+    --timing-frame-top-offset: -8px;
+    --timing-tl-horizontal-gap: 30px;
+    --timing-br-horizontal-gap: 30px;
+    --timing-tl-vertical-gap: 20px;
+    --timing-br-vertical-gap: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  html[data-design='limoncello'] .timeline {
+    --timing-corner-w: min(170px, 46vw);
+    --timing-corner-h: calc(var(--timing-corner-w) * 0.741);
+    --timing-tl-left: calc(var(--timing-corner-w) * -0.16);
+    --timing-tl-top: calc(var(--timing-corner-h) * -0.34);
+    --timing-br-right: calc(var(--timing-corner-w) * -0.14);
+    --timing-br-bottom: calc(var(--timing-corner-h) * -0.16);
+    --timing-frame-top-offset: -8px;
+    --timing-tl-horizontal-gap: 30px;
+    --timing-br-horizontal-gap: 30px;
+    --timing-tl-vertical-gap: 20px;
+    --timing-br-vertical-gap: 20px;
   }
 }
