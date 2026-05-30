@@ -27,10 +27,6 @@ export function DressCode() {
             </figure>
           ))}
         </div>
-
-        <div className="dress-code-note prose">
-          <p className="body-copy">Для нас главное — Ваше присутствие!</p>
-        </div>
       </div>
     </section>
   );
