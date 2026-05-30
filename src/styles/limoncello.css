@@ -408,7 +408,7 @@ html[data-design='limoncello'] .sketch-calendar__heart {
   width: 76px;
   height: 58px;
   fill: none;
-  stroke: #f7b13f;
+  stroke: #508ffd;
   stroke-width: 5px;
   transform: translate(-50%, -50%);
 }
@@ -3247,7 +3247,7 @@ html[data-design='limoncello'] .timeline .timeline-card:nth-of-type(3)::before {
 }
 
 html[data-design='limoncello'] .timeline .timeline-card:nth-of-type(4)::before {
-  background-image: url('/images/limoncello-icon-rings.png');
+  background-image: url('/images/limoncello-icon-scroll.png');
 }
 
 html[data-design='limoncello'] .timeline .timeline-card:nth-of-type(5)::before {

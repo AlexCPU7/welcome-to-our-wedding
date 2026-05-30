@@ -166,6 +166,7 @@
 - `public/images/limoncello-icon-flowers.png`
 - `public/images/limoncello-icon-rings.png`
 - `public/images/limoncello-icon-glasses.png`
+- `public/images/limoncello-icon-scroll.png` — уникальная синяя line-art иконка грамоты для пункта “Торжественная церемония”.
 - `public/images/limoncello-icon-dancers.png`
 - `public/images/limoncello-icon-envelope.png`
 
