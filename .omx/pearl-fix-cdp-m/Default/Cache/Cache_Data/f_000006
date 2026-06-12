@@ -185,7 +185,7 @@ export function Hero() {
             columnNumber: 15
           }, this),
           /* @__PURE__ */ jsxDEV("div", { children: [
-            /* @__PURE__ */ jsxDEV("time", { children: "17:00" }, void 0, false, {
+            /* @__PURE__ */ jsxDEV("time", { children: "16:45" }, void 0, false, {
               fileName: "D:/code/site-welcome/src/components/Hero.tsx",
               lineNumber: 69,
               columnNumber: 17

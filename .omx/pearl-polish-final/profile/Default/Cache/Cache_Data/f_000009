@@ -177,7 +177,7 @@ function CalendarRoute() {
       columnNumber: 7
     }, this),
     /* @__PURE__ */ jsxDEV("article", { className: "calendar-route__event calendar-route__event--banquet", children: [
-      /* @__PURE__ */ jsxDEV("time", { children: "17:00" }, void 0, false, {
+      /* @__PURE__ */ jsxDEV("time", { children: "16:45" }, void 0, false, {
         fileName: "D:/code/site-welcome/src/components/Timeline.tsx",
         lineNumber: 57,
         columnNumber: 9
