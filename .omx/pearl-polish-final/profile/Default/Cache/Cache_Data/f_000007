@@ -98,7 +98,7 @@ export function InvitationText() {
         lineNumber: 31,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ jsxDEV("p", { children: "Основной сбор гостей состоится в ресторане Lauren Parker в 16:45. Для тех, кто хочет присутствовать на свадебной церемонии, мы будем ждать вас в Оперном доме музея-заповедника «Царицыно» к 14:00." }, void 0, false, {
+      /* @__PURE__ */ jsxDEV("p", { children: "Основной сбор гостей состоится в ресторане Lauren Parker в 17:15. Для тех, кто хочет присутствовать на свадебной церемонии, мы будем ждать вас в Оперном доме музея-заповедника «Царицыно» к 14:00." }, void 0, false, {
         fileName: "D:/code/site-welcome/src/components/InvitationText.tsx",
         lineNumber: 35,
         columnNumber: 9
